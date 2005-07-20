@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+  <head>
+    <meta http-equiv="content-type" content="text/xhtml+xml; charset=utf-8" />
+    <meta name="author" content="Emanuele Aina" />
+    <meta name="generator" content="VIm 6.2" />
+            
+    <title>Regole per la buona traduzione</title>
+ </head>
+ <body>
+   <div id="title">
+     <h1>Regole per la buona traduzione</h1>
+     <p><a href="mailto:emanuele.aina@tiscali.it">Emanuele Aina</a></p>
+   </div>
+   
+   <div id="intro">
+     <h2>Introduzione</h2>
+     <p>Lo scopo di questo documento è quello di delineare un insieme di linee 
+     guida alle quali cercare di attenersi quando si traduce un documento 
+     tecnico, un HOWTO, delle pagine di manuale o i messaggi di un programma, 
+     in seguito all'impegno di molti volontari in anni di traduzioni e 
+     revisioni sulle liste dei traduttori.</p>
+     <p>Ovviamente i destinatari principali di questo documento sono i novelli 
+     traduttori che si cimentano per le prime volte con le traduzioni di 
+     documenti tecnici, ma può anche servire per stabilire una base comune di 
+     regole su cui i traduttori più esperti possano fare affidamento.</p>
+     <p>È da tenere ben presente che queste regole non sono una verità 
+     rivelata, ma sono il frutto di discussioni avvenute negli anni e, 
+     pertanto, non pretendono di essere considerate assolute. Piuttosto, la 
+     validità di una traduzione non deve essere una condizione binaria, 
+     bensì un continuo di sfumature che attraversano l'intero spettro di 
+     verità.</p>
+   </div>
+
+   <div id="rules">
+   <div class="rule">
+     <h2>Regole grafiche</h2>
+     <p>Uno stile grafico coerente è indice di professionalità e permette 
+     all'utente di non venire distratto da quelle che per lui possono essere 
+     stranezze visive, ma di concentrarsi sul contenuto del messaggio.</p>
+     <ul>
+
+     <li>
+     <h3>Uso della spaziatura</h3>
+     <p>In un testo italiano vanno usati solo spazi singoli tra una parola e 
+     l'altra, anche dopo il punto al termine di un periodo, a differenza 
+     dell'uso inglese che consente anche di mettere due spazi. L'apostrofo 
+     non prevede che siano posti spazi né a precederlo né a seguirlo, a meno 
+     che si tratti di un troncamento, quale «va'», «po'», ecc.</p>
+     </li>
+     
+     <li>
+     <h3>Segni di interpunzione</h3>
+     <p>Tutti i segni di interpunzione (virgola, punto, punto e virgola, punto 
+     esclamativo, ecc.) seguono direttamente la parola che li precede, senza 
+     spazi, e vanno separati dalla parola successiva con uno spazio. Non fanno 
+     eccezione i punti alla fine di un periodo.</p>
+     <p>es. <samp>"L'italiano, il francese e lo spagnolo sono lingue 
+     neo-latine."</samp></p>
+     </li>
+     
+     <li>
+     <h3>La congiunzione "e"</h3>
+     <p>La congiunzione "e" non va preceduta dalla virgola, a meno che questa 
+     sia una virgola che chiude un inciso.</p>
+     </li>
+     
+     <li>
+     <h3>Parentesi</h3>
+     <p>Le parentesi di apertura hanno uno spazio che le precede mentre la 
+     parola successiva è attaccata ad esse. Il contrario è vero per le 
+     parentesi di chiusura.</p>
+     <p>es. <samp>"Esempio (dell'uso) di parentesi."</samp></p>
+     </li>
+    
+     <li>
+     <h3>Maiuscole</h3>
+     <p>Mentre in inglese è convenzione porre tutte le lettere iniziali 
+     delle parole componenti un titolo in maiuscolo, in italiano ciò è
+     considerato errore, in quanto solo la prima parola usa l'iniziale
+     maiuscola.</p>
+     </li>
+
+     <li>
+     <h3>Nomi di programmi</h3>
+     <p>I nomi dei programmi esulano dalla precedente regola sulle maiuscole:
+     se un nome di programma compare all'inizio della frase, la sua prima
+     lettera non va forzata maiuscola, ma va scritto riportando esattamente 
+     la corretta grafia.</p>
+     <p>Se tale grafia non possiede l'iniziale maiuscola è
+     consigliabile tentare di modificare la frase affinché il nome non cada
+     più all'inizio.</p>
+     <p> es. <samp>"Mozilla"</samp>, <samp>"apt"</samp>, <samp>"GNOME"</samp>,
+     <samp>"giFT"</samp>, <samp>"Konqueror"</samp>,
+     <samp>"GStreamer"</samp>.</p>
+     </li>
+    
+     <li>
+     <h3>Accenti</h3>
+     <p>È da considerarsi errore l'uso di una vocale seguita da un apostrofo 
+     «'» o da un apice inverso «`» per simboleggiare una vocale accentata. Se 
+     la codifica lo consente, vanno sempre impiegati i simboli appositi, sia 
+     per le minuscole che per le maiuscole. </p>
+     <p>Nell'ambiente X11 usato sui sistemi UNIX, le maiuscole accentate sono 
+     ottenibili usando il tasto BlocMaiusc insieme agli stessi tasti usati per 
+     le minuscole.</p>
+     <p>Le vocali "a", "i" e "u" possiedono solo una possibile pronuncia e 
+     quindi vanno sempre poste con l'accento grave ("à", "ì", "ù").</p>
+     <p>La vocale "o", invece, può essere sia aperta che chiusa ma, poiché non 
+     esistono parole tronche che terminano per "o" chiusa, l'accento alla fine 
+     della parola è sempre grave ("ò").</p>
+     <p>In generale, è convenzione comune anche in editoria utilizzare
+     esclusivamente l'accento grave sulle vocali "a", "i", "o" e "u".</p>
+     <p>Per la vocale "e" la situazione è più complicata: normalmente va usato 
+     l'accento grave ("è") ma in alcuni casi va usato quello acuto ("é"): 
+     "perché", "affinché", "poiché" (in generale tutti i vocaboli che 
+     terminano in "ché"), "né", "sé".</p>
+     </li>
+     
+     <li>
+     <h3>Virgolette</h3>
+     <p>In italiano non sono da usare gli apici singoli «'». Al loro posto 
+     vanno usate le virgolette doppie, sia alte (" ") che basse (« »).</p>
+     <p>La scelta tra i due tipi di virgolette rimane una scelta del 
+     traduttore nella maggiornaza dei casi, anche se è auspicabile mantenere
+     una certa coerenza tra traduzioni appartenenti allo stesso ambiente.</p>
+     <p>Senza dubbio le virgolette alte vanno usate quando si usa un termine
+     con un significato diverso da quello corrente (come si usa dire,
+     "tra virgolette"), mentre quelle basse (dette caporali)
+     vanno usate per citazioni di discorsi diretti.</p>
+     <p>Negli altri casi la scelta ricade sul traduttore, ma l'uso diffuso
+     prevede l'impiego di virgolette basse per nomi di file, comandi di shell e,
+     talvolta, per identificativi di elementi dell'interfaccia utente (ad es.
+     voci di menù o pulsanti nelle interfacce grafiche).</p>
+     <p>Nei casi in cui l'uso delle virgolette alte sia sconveniente,
+     ad esempio se un apostrofo finisse vicino a una virgoletta, è consigliabile
+     usare quelle basse per evitare confusione.</p>
+     <p>In ambiente <a title="The X Window System" 
+     href="http://www.x.org/">X Window</a> le virgolette basse possono essere
+     introdotte con le combinazioni di tasti 
+     <kbd>&lt;Alt-Gr&gt;+z</kbd> («) e <kbd>&lt;Alt-Gr&gt;+x</kbd> (»), 
+     oppure usando i loro codici Unicode (U+00AB per « e U+00BB per »).</p>
+     </li>
+
+     <li>
+     <h3>Caratteri speciali</h3>
+     <p>Solitamente, nelle traduzioni italiane, la codifica usata è un
+     superinsieme della codifica <acronym>ASCII</acronym>, pertanto diviene
+     possibile usare alcuni caratteri speciali, dove appropriato.</p>
+     <p>Per questo motivo è solitamente considerato errore simulare vocali
+     accentate con apostrofi «'» o apici inversi «`». Inoltre, è
+     caldamente raccomandabile la sostituzione delle stringhe "(c)" con il
+     carattere "©" (e, analogamente, "®"), oppure l'uso del simbolo di
+     moltiplicazione "×" dove fosse usata la lettera "x" in sua vece.</p>
+     </li>
+
+     <li>
+     <h3>Uso della "h"</h3>
+     <p>Fatta eccezione per i casi in cui compaiono "gh" o "ch" e per il verbo
+     avere, in italiano la lettera "h" compare solo a fine parola o tra due
+     vocali. Questo è particolarmente vero per le esclamazioni come "ehi"
+     (non "hei"), "ahi", "oh", "ah", "beh" (non "bhe").</p>
+     </li>
+
+     <li>
+     <h3>Monosillabi accentati</h3>
+     <p>I monosillabi che in italiano esistono sia in forma semplice che in
+     forma accentata sono pochi e ben definiti: "dà", "sé", "tè", "lì", "là",
+     "sì", "né".</p>
+     </li>
+
+     <li>
+     <h3>Troncamenti ed elisioni</h3>
+     <p>Quando si ha elisione è necessario porre l'apostrofo dopo la parola: ne
+     sono un esempio i monosillabi «po'», «va'», «fa'» e «di'».</p>
+     <p>Nei casi in cui si ha, invece, un troncamento l'apostrofo non va
+     messo: un esempio corretto di tale pratica è l'uso di «qual è» invece 
+     dell'errato «qual'è».</p>
+     </li>
+
+     <li>
+     <h3>Forme eufoniche</h3>
+     <p>Le forme eufoniche (ed, ad, od) vanno usate solo se la vocale che
+     segue è la stessa (es. <samp>"Io ed Elisabetta"</samp>).</p>
+     <p>Se la vocale che segue è diversa, la presenza della "d" non è
+     considerata errata ma non è neppure esempio del migliore stile 
+     (es. <samp>"Io e Alberto"</samp> invece che <samp>"Io ed Alberto"</samp>).
+     </p>
+     </li>
+
+     <li>
+     <h3>Data e ora</h3>
+     <p>Il formato italiano numerico per la data è "GG/MM/AAAA" 
+     (es. "<samp>25/05/2004</samp>"), ma andrebbe preferito, se possibile,
+     il formato esteso "ggg GG mese AAAA" (es. 
+     "<samp>mer 25 maggio 2004</samp>").</p>
+     <p>Per quanto concerne il formato orario è da usare il formato 
+     <samp>HH.MM.SS,DD</samp> in cui il punto è usato come separatore per la
+     parte sessagesimale e la virgola separa la parte decimale dei secondi
+     (decimi, centesimi e così via).</p>
+     <p>Questi formati vanno usati quando viene richiesta la rappresentazione
+     localizzata della data, mentre se nel testo originale la data compare già
+     nel formato internazionale, va lasciata la notazione ISO.</p>
+     </li>
+     </ul>
+   </div>
+   
+   <div class="rule">
+     <h2>La forma</h2>
+     <ul>
+     
+     <li>
+     <h3>Termini stranieri</h3>
+     <p>I termini stranieri vanno sempre lasciati nella loro forma pura, priva
+     di flessione. Non debbono venire coniugati neppure al plurale, restando
+     sempre nella loro forma singolare: questo è per evitare problemi con 
+     vocaboli dotati di plurale irregolare ("mouse" - "mice") o con lingue
+     poco conosciute ("kamikaze", "pasdaran", ecc.).</p>
+     <p>Lo stesso trattamento va riservato per le forme terminanti in -ing,
+     in cui va lasciato solo l'infinito del verbo.</p>
+     <p>es. <samp>"Eseguire il link"</samp> invece che
+     <samp>"Eseguire il linking"</samp>.</p>
+     <p>Per quanto riguarda il genere, il termine assume quello che avrebbe se 
+     tradotto in italiano oppure quello che suona meglio dandogli un 
+     significato italiano. In caso di dubbio è consigliabile rifarsi all'uso 
+     comune (sempre che ne esista uno).</p>
+     <p>es. <samp>"Ho comprato due mouse"</samp>,
+     <samp>"Mandami i tuoi file"</samp>.</p>
+     </li>
+     
+     <li>
+     <h3>Italianizzazioni</h3>
+     <p>Termini stranieri "italianizzati" ("settare", "rebootare", "pingare") 
+     sono da evitare usando i termini corretti ("impostare", "riavviare") o 
+     aggirandoli con parafrasi ("effettuare il ping").</p>
+     </li>
+     
+     <li>
+     <h3>Rivolgersi all'utente</h3>
+     <p>Mentre i testi inglesi usano solitamente rivolgersi direttamente al 
+     lettore, in italiano è una cosa da evitare in ogni modo, essendo 
+     preferibile usare forme impersonali per esprimere gli stessi concetti.
+     Detto ciò, è anche necessario limitare l'uso del "si" impersonale, il 
+     quale tende a rendere le frasi pesanti e poco scorrevoli, privilegiando 
+     l'uso dell'infinito.</p>
+     <p>Si tenga, inoltre, presente che in inglese i programmi tendono a 
+     essere più educati dell'uso comune italiano, anteponendo molti "please"
+     alle azioni che l'utente deve compiere. In italiano, invece, i programmi
+     sono molto più freddi e si limitano a dire all'utente cosa deve fare.</p>
+     <dl>
+       <dt><samp>"Select another option"</samp></dt>
+       <dd><samp>"Si selezioni un'altra opzione"</samp></dd>
+       <dd><samp>"Selezionare un'altra opzione"</samp></dd>
+       
+       <dt><samp>"Please choose [...]"</samp></dt>
+       <dd><samp>"Scegliere [...]"</samp></dd>
+     </dl>
+     </li>
+     
+     <li>
+     <h3>Forma impersonale</h3>
+     <p>Mentre in inglese il programma si riferisce a sé stesso in prima 
+     persona, in italiano ciò è da evitare, usando costrutti impersonali
+     o forme passive.</p>
+     <dl>
+       <dt><samp>"I'm going to ask you some questions"</samp></dt>
+       <dd><samp>"Verranno poste alcune domande"</samp></dd>
+     </dl>
+     </li>
+
+     <li>
+     <h3>Verbi al gerundio</h3>
+     <p>Spesso nei testi da tradurre compaiono verbi posti al gerundio (es. 
+     <samp>"Installing GNOME"</samp>) che, se tradotti con un gerundio
+     italiano darebbero un'idea diversa dall'originale.</p>
+     <p>In questi casi è raccomandabile tradurli sostantivizzando l'azione:
+     <samp>"Installazione di GNOME"</samp> oppure <samp>"Installazione di 
+     GNOME in corso"</samp> se si volesse porre maggior accento sul
+     contemporaneo svolgimento dell'operazione, anche se ciò appesantisce la
+     frase.</p>
+     <p>Altre volte è meglio usare il verbo all'infinito per evitare di dover
+     creare nuovi sostantivi o di dover usare forme sostantivizzate poco
+     scorrevoli: usando frasi come <samp>"Errore nell'installare GNOME"</samp>
+     si riesce, inoltre, a mantenere una certa relazione tra la forma
+     originale e quella tradotta, riducendo la probabilità di dover rigirare
+     la frase.
+     </p>
+     </li>
+
+     <li>
+     <h3>Esclamative e interrogative</h3>
+     <p>Domande retoriche, frasi esclamative o interrogative e forme
+     colloquiali sono da evitare, cercando di usare al loro posto una forma
+     affermativa impersonale, che conferisce al programma un tono più
+     professionale o, perlomeno, distaccato.</p>
+     </li>
+     
+     <li>
+     <h3>Periodi brevi</h3>
+     <p>Mentre in inglese è diffuso l'uso di brevi periodi in successione 
+     legati tra loro, in italiano è considerato un esempio di cattivo stile.
+     Pertanto è consigliabile cercare di fondere questi periodi in periodi più 
+     lunghi, articolati in frasi principali e subordinate.</p>
+     </li>
+
+     <li>
+     <h3>Incisi</h3>
+     <p>Nei testi anglofoni è consuetudine inserire incisi introdotti da un
+     trattino ("-") o da due trattini ("--"): in italiano sono da evitare,
+     sopperendo con l'uso delle virgole o dei due punti.</p>
+     </li>
+     
+     <li>
+     <h3>Traduzione letterale</h3>
+     <p>Compito del traduttore è di cercare di rimanere il più possibile 
+     fedele all'originale: questo non significa necessariamente tradurre 
+     letteralmente, bensì cercare di rendere perfettamente quanto esposto 
+     del documento originale. Più la traduzione è vicina all'originale, 
+     tanto questa è migliore, ma tale vicinanza non deve verificarsi a 
+     scapito della forma o della correttezza: a causa del diverso modo di 
+     costruire le frasi nelle varie lingue, spesso è da considerare migliore 
+     una traduzione che si distacca dall'originale ma è più scorrevole o 
+     più elegante.</p>
+     </li>
+     
+     <li>
+     <h3>Tradurre, non spiegare</h3>
+     <p>Questo è una massima valida per tutte le traduzioni tecniche. Una 
+     traduzione deve cercare di rendere esattamente ciò che è espresso 
+     dall'originale, senza sforzarsi di renderlo più chiaro o meno ambiguo,
+     a meno di errori nell'originale che vanno corretti e segnalati agli
+     autori.</p>
+     <p>Ciò non vuol dire che le traduzioni debbano essere necessariamente
+     letterali (anche se talvolta può essere certamente considerato un 
+     pregio): semplicemente non è compito del traduttore fare precisazioni 
+     su un testo ambiguo.</p>
+     <p>Talvolta ciò può accadere in modo inevitabile per diversità della 
+     lingua: ad esempio il termine "free software" in italiano diviene 
+     "software libero". Con una tale traduzione, tuttavia, diviene pressoché 
+     impossibile tradurre anche la precisazione che spesso viene fatta tra
+     gli anglofoni: "free as in speech, not as free beer".</p>
+     <p>È per evitare casi come questi che il lavoro del traduttore non 
+     comprende la chiarificazione di un testo poco chiaro nella sua forma 
+     originale: in tali casi il comportamento migliore sarebbe quello di 
+     contattare l'autore originale e far presente che il testo contiene 
+     delle parti dubbie, sollecitandolo a chiarirle.</p>
+     </li>
+     </ul>
+   </div>
+   
+   <div class="rule">
+     <h2>Traduzione di termini tecnici</h2>
+     <ul>
+     
+     <li>
+     <h3>Tradurre, non spiegare</h3>
+     <p>Anche per i singoli termini vale questa regola: bisogna guardarsi dal 
+     precisare più di quanto il termine stesso dica, onde evitare spiacevoli 
+     malintesi. Anche per questo una traduzione deve essere succinta, onde 
+     evitare di implicare più di quanto non sia necessario.</p>
+     </li>
+     
+     <li>
+     <h3>Non sorprendere gli utenti esperti</h3>
+     <p>Quando si trova davanti alla traduzione di un termine, un utente 
+     esperto deve trovarla naturale e deve poter risalire subito al termine 
+     originale.</p>
+     <p>I tecnici generalmente conoscono il termine originale, pertanto la 
+     traduzione non deve essere fuorviante o più difficile da leggere di 
+     quest'ultimo, altrimenti è meglio lasciare il termine invariato.</p>
+     <p>È da evitare soprattutto l'introduzione di termini arbitrari, in 
+     quanto questi rischiano di essere diversi da un testo all'altro, 
+     confondendo il lettore.</p>
+     </li>
+     
+     <li>
+     <h3>Corrispondenza 1:1</h3>
+     <p>Una traduzione tecnica deve essere l'unica traduzione possibile di un 
+     termine, in quanto il suo significato è talmente preciso e ben delimitato 
+     che chi la legge si aspetta di trovarla sempre uguale, come sempre uguale 
+     è il concetto che essa esprime.</p>
+     <p>Oltre ad essere l'unica traduzione possibile di un termine, la buona 
+     traduzione traduce solo quel termine e non può essere confusa con 
+     null'altro, in modo che il termine originale e quello tradotto siano 
+     perfettamente equivalenti.</p>
+     </li>
+     
+     <li>
+     <h3>Autosufficienza</h3>
+     <p>Una buona traduzione non deve richiedere spiegazioni poste tra 
+     parentesi o di giri di parole per poter essere utilizzata; deve, anzi,
+     fare in modo che non sia affatto necessario rigirare la frase 
+     originale.</p>
+     </li>
+     
+     <li>
+     <h3>Riconoscibilità</h3>
+     <p>Una buona traduzione deve essere riconoscibile da un tecnico in quanto
+     la parola tradotta (in ordine di importanza):</p>
+     <ol>
+       <li>è comunemente usata dai tecnici del settore;</li>
+       <li>traduce l'originale in maniera semanticamente fedele;</li>
+       <li>traduce l'originale in maniera letteralmente fedele;</li>
+       <li>assomiglia all'originale.</li>
+     </ol>
+     </li>
+     
+     <li>
+     <h3>Eleganza</h3>
+     <p>Per essere una buona traduzione, la traduzione deve essere elegante 
+     in italiano: molte traduzioni per altri motivi molto valide sono 
+     pressoché inutilizzabili a causa della loro bruttezza e goffaggine.</p>
+     </li>
+
+     <li>
+     <h3>Coerenza</h3>
+     <p>Effettuando una traduzione bisogna sforzarsi di restare
+     omogenei con le traduzioni già fatte, in quanto traduzioni non
+     coerenti tra loro diventano facilmente fonte di confusione per
+     l'utente.</p>
+     <p>Oltre alla lettura delle traduzioni di programmi e documenti relativi
+     all'oggetto della traduzione è possibile consultare guide apposite come
+     il <a href="http://81100.eu.org/em/glossario/glossario.html"
+     title="Il glossario">glossario dei traduttori di programmi liberi</a> o,
+     se si stessero traducendo elementi di una interfaccia grafica,
+     le <a href="http://www.firenze.linux.it/~algol/linee-guida/"
+     title="Le linee guida di GNOME">linee guida</a> di Luca Ferretti.</p>
+     </li>
+     
+     </ul>
+   </div>
+   </div>
+
+   <div id="thanks">
+     <h2>Ringraziamenti</h2>
+     <p>Alcune regole sono state prese in prestito dalle pagine dei <a
+     href="http://kde.gulp.linux.it/">traduttori di KDE</a> redatte da 
+     Andrea Rizzi, altre provengono dal 
+     «<a href="http://developer.gnome.org/projects/gtp/style-guides/pdf/styleguide-it.pdf"
+     title="Il manuale di stile SUN">Manuale di stile per la traduzione</a>»
+     per i traduttori di 
+     <a href="http://www.sun.it">SUN Microsystems</a>, mentre la maggior parte
+     delle norme proviene dal glossario dei 
+     <a href="http://www.linux.it/tp/">traduttori di programmi liberi</a>,
+     redatto da Marco d'Itri, Francesco Potortì e molti altri.</p>
+   </div>
+
+   <div id="copyright">
+     <p>Copyright © 2003, 2004, 2005 Emanuele Aina.</p>
+   </div>
+
+   <div id="footer">
+     <div>
+     <a href="http://validator.w3.org/check/referer">Valid XHTML 1.0 Strict</a>
+     </div>
+     <div>
+     <a href="mailto:emanuele.aina@tiscali.it">Emanuele Aina</a> - 
+     Thu, 24 Feb 2005 15:58:02 +0100
+     </div>
+   </div>
+ </body>
+</html>

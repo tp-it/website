@@ -1,0 +1,78 @@
+2005-02-24  Emanuele Aina <emanuele.aina@tiscali.it>
+
+	* buona_traduzione.html: corretto il tag <keyboard> in <kbd>
+
+2005-02-10  Emanuele Aina <emanuele.aina@tiscali.it>
+
+	* buona_traduzione.html: migliorata una frase nella sezione "Virgolette"
+
+2005-02-09  Emanuele Aina <emanuele.aina@tiscali.it>
+
+	* buona_traduzione.html: modificato la sezione riguardante le virgolette
+	chiarendo meglio cosa deve decidere il traduttore
+
+2005-02-06  Emanuele Aina <emanuele.aina@tiscali.it>
+
+	* buona_traduzione.html: aggiunta una copia locale
+	* data_ora_valuta.html: aggiunto grazie a Luca Ferretti
+	* index.html: riscrittura parziale per poter ospitare tutta la
+	documentazione prodotta e per avere uno stile marginalmente migliore :)
+	* index.html: aggiornati i link per evitare redirect inutili (HTTP 301)
+
+2004-12-13  Emanuele Aina <emanuele.aina@tiscali.it>
+
+	* index.html: cambiati i link alla pagina personale di Emanuele
+	dopo che disastro.cuore.org è morto del tutto e il sito è stato spostato
+	su http://81100.eu.org/em/
+
+2004-06-19  Emanuele Aina <em@disastro.cuore.org>
+
+	* glossario.html: cambiato "edit, to" da "editare" a "modificare"
+
+2004-06-08  Emanuele Aina <em@disastro.cuore.org>
+
+	* glossario.html: aggiunto "genitore" per "parent"
+	* glossario.html: cambiato "link, to" in "link" e aggiunta "collegamento"
+	come traduzione, corredata di nota esplicativa
+
+2004-06-06  Emanuele Aina <em@disastro.cuore.org>
+
+	* glossario.html: corretto il genere di "digest": è maschile
+
+2004-05-30  Emanuele Aina <em@disastro.cuore.org>
+
+	* glossario.html: aggiunti "login", "logout", "log in, to" e "log out, to"
+	* glossario.html: aggiunto "media" -> "supporto"
+
+2004-05-20  Emanuele Aina <em@disastro.cuore.org>
+
+	* glossario.html: modificato "drive" includendo l'uso di "unità" e
+	specificando che, se invariato, va considerato maschile
+
+2004-05-13	Emanuele Aina <em@disastro.cuore.org>
+
+	* glossario.html: sincronizzato con http://disastro.cuore.org/~em/
+	* procedura_tp.html: valida nuovamente XHTML (<ul> e <pre> dentro a <p>)
+	* ChangeLog: retab'bificato (":help retab" in vim 6.2)
+
+2004-02-28	Emanuele Aina <em@disastro.cuore.org>
+
+	* glossario.html: sincronizzato con http://disastro.cuore.org/~em/
+
+2004-01-18	Emanuele Aina <em@disastro.cuore.org>
+
+	* index.html: aggiunto collegamento a procedura_tp.html
+	* index.html: corretto "Gnome" in "GNOME"
+
+2004-01-17	Emanuele Aina <em@disastro.cuore.org>
+
+	* procedura_tp.html: aggiunto il file procedura_tp.html contenente gli 
+	appunti pubblicati da Cristian Rigamonti
+
+2004-01-13	Emanuele Aina <em@disastro.cuore.org>
+
+	* glossario.html: aggiunto glossario.html
+	* index.html: aggiunto il collegamento a glossario.html e aggiornata la
+	relativa sezione
+	* index.html: aggiunto il collegamento agli archivi compressi anno per 
+	anno

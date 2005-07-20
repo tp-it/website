@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+  <head>
+    <meta http-equiv="content-type" content="text/xhtml+xml; charset=utf-8" />
+    <meta name="author" content="Luca Ferretti" />
+    <meta name="author" content="Emanuele Aina" />
+    <meta name="generator" content="VIm 6.3" />
+    <meta name="keywords" content="formati, data, ora, valuta, traduzioni, localizzazione, l10n" />
+            
+    <title>Formato italiano della data, dell'orario e della valuta</title>
+ </head>
+
+ <body>
+   <div id="title">
+     <h1>Formato italiano della data, dell'orario e della valuta</h1>
+     <p><a href="mailto:elle.uca@infinito.it">Luca Ferretti</a></p>
+   </div>
+   
+   <div id="intro">
+     <h2>Introduzione</h2>
+     <p>Questo documento intende definire e descrivere il formato da seguire 
+     per indicare la data, l'ora e la valuta così come dovrebbe essere
+     convenzione in Italia.</p>
+   </div>
+
+
+   <div id="UNI">
+     <h2>Standard UNI</h2>
+     <p>Esiste un formato promosso dall'UNI, la cui finalità è rendere
+     comprensibili le comunicazioni internazionali sia tramite elaboratore
+     elettronico, sia senza.</p>
+
+     <p>Sebbene tale formato goda di una pregevole rappresentazione logica è
+     (anno-&gt;mese-&gt;giorno-&gt;ora-&gt;minuto), è altresì vero che esula
+     dall'interesse di un traduttore: non bisogna "creare" qualcosa che deve
+     essere usato e capito da persone di diverse nazioni che usano diverse
+     notazioni, ma si sta localizzando un programma per una persona che parla,
+     pensa, scrive e si confronta tutti giorni con la lingua italiana.</p>
+
+     <p>D'altro canto se si volesse adottare il formato UNI, bisognerebbe farlo
+     fino in fondo: ciò vorrebbe quindi dire che nella necessità di indicare
+     data <em>e</em> ora si dovrebbe scrivere, ad esempio. 2003-02-08T15:45 
+     (e la "T" non è un errore di digitazione, ma la corretta scrittura di 
+     quella particolare ora nel formato UNI).</p>
+   </div>
+
+
+   <div id="data">
+     <h2>Data</h2>
+     <p>È possibile identificare diverse notazioni in base al contesto e/o alla
+     necessità di spazio, in particolare le seguenti:</p>
+
+     <ol>
+        <li>formato ridotto:  <samp>gg/mm/aaaa</samp></li>
+
+        <li>formato esteso abbreviato:  <samp>GGG g MMM aaaa</samp></li>
+
+        <li>formato esteso:  <samp>GIORNO g MESE aaaa</samp></li>
+     </ol>
+
+     <p>dove, in particolare, "g" indica il numero del giorno senza lo zero
+     iniziale, "gg" con lo zero, nel caso di numeri inferiori a 10. Questa
+     convenzione vale anche nel seguito per gli altri elementi descritti.</p>
+
+     <p>La particolarità dell'espressione italiana è l'ordine 
+     giorno-&gt;mese-&gt;anno.</p>
+
+     <p>Esprimendo con gli argomenti ammessi dal programma GNU date(1),
+     diventano:</p>
+
+     <ol>
+       <li><code>%d/%m/%Y</code></li>
+       <li><code>%a %-d %b %Y</code></li>
+       <li><code>%A %-d %B %Y</code></li>
+     </ol>
+
+     <p>Esempi:</p>
+     
+     <ol>
+       <li><samp>01/01/2003</samp></li>
+       <li><samp>mer 1 gen 2003</samp></li>
+       <li><samp>mercoledì 1 gennaio 2003</samp></li>
+     </ol>
+
+     <p>Ovviamente sono ammesse anche notazioni "miste" (uso di anno a due 
+     cifre nella notazione n° 1, oppure combinazioni varie delle notazioni 
+     2 e 3), ma vengono da sè. Consultare la pagina di manuale di date(1) 
+     per trovare gli argomenti necessari.</p>
+   </div>
+
+   <div id="orario">
+     <h2>Orario</h2>
+     <p>La notazione convenzionale, pur se non codificata, per indicare un
+     orario in lingua italiana è</p>
+    
+     <ul>
+       <li>o.mm.ss</li>
+     </ul>
+
+     <p>con l'ora espressa nel formato a 24 ore e <em>senza</em> lo zero 
+     iniziale.</p>
+
+     <p>Esprimendo nella sintassi del programma GNU date(1) diventa:</p>
+
+     <ul>
+       <li><code>%k.%M.%S</code></li>
+     </ul>
+
+     <p>Esempi:</p>
+	
+     <ul>
+       <li><samp>13.00.56</samp></li>
+       <li><samp>&nbsp;4.12</samp></li>
+     </ul>
+
+     <p>La presenza dello zero iniziale (ottenibile con date(1) sostituendo 
+     al %k un %H) è ammessa nel caso si abbia necessità per questioni di
+     allineamento o di ordinamento. È bene notare, che per la sola
+     motivazione di allineamento, la convenzione di date(1) prevede la
+     possibilità di usare i modificatori "_" e "-" per nascondere delle
+     cifre. Consultare la pagina di man per maggiori informazioni.</p>
+    
+     <p>Nel caso in cui si debba usare il formato a 12 ore sarebbe opportuno
+     rendere con "a.m." e "p.m." le indicazioni antimeridiano e pomeridiano.
+     Ogni altra espressione (AM/PM o A.M./P.M e così via) è da evitare.</p>
+
+     <p>Sempre nel caso in cui si debba usare il formato a 12 ore, l'argomento
+     di date(1) da usare per l'ora è %-I</p>
+
+     <h3>NOTA</h3>
+    
+     <p><acronym>GMT</acronym> (Greenwich Mean Time) e <acronym>UTC</acronym>
+     (Universal Time Clock) rappresentano tempi leggermente diversi. Il primo 
+     è basato su rilevazioni astronomiche il secondo è scandito da un orologio
+     atomico. Gli eventuali "salti" che possono verificarsi a distanza di anni 
+     vengono comunque compensati.</p>
+   </div>
+
+
+   <div id="valuta">
+     <h2>Valuta</h2>
+     <p>(da scrivere)</p>
+   </div>
+   
+   <div id="ringraziamenti">
+     <h2>Ringraziamenti</h2>
+     <p>Questo documento è statto scritto e pubblicato sulla
+     <a href="http://www.linux.it/tp/">lista dei traduttori di programmi 
+     liberi</a> da <a href="mailto:elle.uca@infinito.it">Luca Ferretti</a>
+     e successivamente convertito in 
+     <acronym title="eXtensible Hyper Text Markup Language">XHTML</acronym>
+     da <a href="mailto:emanuele.aina@tiscali.it">Emanuele Aina</a>.</p>
+   </div>
+
+   <div id="copyright">
+     <p>Copyright © 2005 Luca Ferretti.</p>
+   </div>
+   <div id="footer">
+     <div>
+     <a href="http://validator.w3.org/check/referer">Valid XHTML 1.0 Strict</a>
+     </div>
+     <div>
+     <a href="mailto:emanuele.aina@tiscali.it">Emanuele Aina</a> - Sun, 06 Feb 2005 14:31:17 +0100
+     </div>
+   </div>
+
+ </body>
+</html>
+
