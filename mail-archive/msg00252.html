@@ -1,0 +1,205 @@
+<!-- MHonArc v2.4.4 -->
+<!--X-Subject: Re: dubbi (acknowledgment) -->
+<!--X-From-R13: Tnoevmvb Egrsnav <s.fgrsNgvfpnyvarg.vg> -->
+<!--X-Date: Mon, 08 May 2000 15:26:05 +0200 -->
+<!--X-Message-Id: 3916DBDC.741018CD@tiscalinet.it -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: Pine.LNX.4.04.10004300758480.369&#45;100000@dinkel.brot.dg -->
+<!--X-Reference: E12nJ4V&#45;0002UW&#45;00@pot.cnuce.cnr.it -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Re: dubbi (acknowledgment)</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css" TITLE="style">
+<LINK REV="made" HREF="mailto:f.stef@tiscalinet.it">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+	<TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="5">
+	<TR><TD WIDTH="100%" BGCOLOR="#99CCFF" ALIGN="CENTER"><B>
+	<FONT COLOR="#000000" SIZE=+1>Fabrizio Stefani on Mon, 08 May 2000 15:26:05 +0200
+	</FONT></B></TD></TR></TABLE>
+<P>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<P><BR>
+[<A HREF="msg00251.html">Date Prev</A>] [<A HREF="msg00253.html">Date Next</A>] [<A HREF="msg00240.html">Thread Prev</A>] [<A HREF="msg00253.html">Thread Next</A>] [<A
+HREF="mail18.html#00252">Date Index</A>] [<A
+HREF="thrd18.html#00252">Thread Index</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<P>
+	<TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="5">
+	<TR><TD WIDTH="100%" BGCOLOR="#FFF0D0"><FONT COLOR="#000000">
+        <B>Re: dubbi (acknowledgment)</B>
+	</FONT></TD></TR> </table>
+<P>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>To</em>: <A HREF="mailto:it@DOMAIN.HIDDEN">it@xxxxxx</A></LI>
+<LI><em>Subject</em>: Re: dubbi (acknowledgment)</LI>
+<LI><em>From</em>: Fabrizio Stefani &lt;<A HREF="mailto:f.stef@DOMAIN.HIDDEN">f.stef@xxxxxxxxxxxxx</A>&gt;</LI>
+<LI><em>Date</em>: Mon, 08 May 2000 15:23:08 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+acknowledgment
+
+Francesco Potorti` wrote:
+&gt; Qual è  il contesto?  Se  si tratta di  un testo generico che  parla
+del
+&gt; funzionamento  dei protocolli  in maniera  completamente  aspecifica, il
+&gt; "pacchetto di conferma" che suggerisce Daniele Giacomini può andare.
+&gt; 
+&gt; Se si tratta  di qualcosa di più specifico,  può essere molto rischioso.
+&gt; Parlando  di protocolli  particolari, quasi  tutte le  terminologie sono
+&gt; riferite  a   nomi  propri  delle   varie  parti  dei   protocolli.   In
+&gt; particolare, il  "pacchetto di acknowledgement" è  chiamato sempre così,
+&gt; perché è  il suo nome, e  suonerebbe stranissimo a chiunque  abbia a che
+&gt; fare con i protocolli qualunque altro nome.
+&gt; 
+&gt; Ti sconsiglio vivamente di cercare di  tradurlo a meno che tu non sappia
+&gt; molto bene  quel che fai.  Se mandi  un estratto più grande  di quel che
+&gt; stai traducendo e spieghi cos'è posso essere più preciso.
+
+Sto traducendo il Diskless HOWTO, la parte incriminata riguarda la RFC
+sul protocollo TFTP.
+
+In effetti è *molto* tecnico, rileggendolo penso che "conferma" ci
+andrebbe bene, almeno come senso e come scorrevolezza in italiano; però
+trattandosi della descrizione di un protocollo mi sa che la libertà di
+scelta (del traduttore) è molto limitata.
+
+Network Working Group                                         K. Sollins
+Request For Comments: 1350                                           MIT
+STD: 33                                                        July 1992
+Obsoletes: RFC 783
+
+                      THE TFTP PROTOCOL (REVISION 2)
+
+[...]
+The acknowledgement and retransmission scheme was inspired by TCP, and
+the error mechanism was suggested bq PARC's EFTP abort message.
+[...]
+
+2. Overview of the Protocol
+
+Any transfer begins with a request to read or write a file, which
+   also serves to request a connection.  If the server grants the
+   requests the connection is opened and the file is sent in fixed
+   length blocks of 512 bytes.  Each data packet contains one block of
+   data, and must be acknowledged by an acknowledgment packet bebore the
+
+qui ci vedo bene
+   "...e deve esserv confermato da un pacchetto di acknowledgment..."
+
+   next packet can be sent.  A data packet of less than 512 bytes
+   signals termination of a transfer.  If a packet gets lost in the
+   network, the intended recipient will timeout and may retransmit his
+   last packet (which may be data or an acknowledgment), thus causing
+   the sender of the lost packet to retransmit that lost packet.  The
+   sender has to keep just one packet on hand for retransmission, since
+   the lock step acknowledgment guarantees that all older packets have
+   been received.  Notice that both machines involved in a transfer are
+   considered senders and receivers.  One sends data and receives
+   acknowledgments, the other sends acknowledgments and receives data.
+
+   Most errors cause termination of the connection.  An error is
+   signalled by sending an error packet.  This packet is not
+   acknowledged, and not retransmitted (i.e., a TFTP server or user may
+   terminate after sending an error message), so the other end of the
+   connection may not get it.  Therefore timeouts are used to detect
+   such a termination when the error packet has been lost. [...]
+
+   This protocol is very restrictive, in order to simplify
+   implementation.  For example, the fixed length blocks make allocation
+   straight forward, and the lock step acknowledgement provides flow
+   control and eliminates the need to reorder incoming data packets.
+
+[...]
+
+4. Initial Connection Protocol
+
+   A transfer is established by sending a request (WRQ to write onto a
+   foreign file system, or RRQ to read from it), and receiving a
+   positive reply, an acknowledgment packet for write, or the first data
+   packet for read.  In general an acknowledgment packet will contain
+   the block number of the data packet being acknowledged.  Each data
+   packet has associated with it a block number; block numbers are
+   consecutive and begin with one.  Since the positive response to a
+   write request is an acknowledgment packet, in this special case the
+   block number will be zero.  (Normally, since an acknowledgment packet
+   is acknowledging a data packet, the acknowledgment packet will
+   contain the block number of the data packet being acknowledged.)  If
+   the reply is an error packet, then the request has been denied.
+
+Quindi lascerei "acknowledgment" dove si riferisce esplicitamente ai
+pacchetti, mentre sostituirei "conferma" nelle spiegazioni.
+Ad es. l'ultima  frase fra parentesi diventerebbe:
+
+(Di solito, visto che un pacchetto di acknowledgment conferma un
+pacchetto dati, il pacchetto di acknowledgment conterrà il numero del
+blocco del pacchetto da confermare)
+
+Cosa ne pensi?
+
+Ciao, 
+Fabrizio.
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<LI><STRONG><A NAME="00253" HREF="msg00253.html">Re: dubbi (acknowledgment)</A></STRONG>
+<UL><LI><EM>From:</EM> Francesco Potorti`</LI></UL></LI>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<UL><LI><STRONG>References</STRONG>:
+<UL>
+<LI><STRONG><A NAME="00232" HREF="msg00232.html">Re: dubbi</A></STRONG>
+<UL><LI><EM>From:</EM> daniele giacomini</LI></UL></LI>
+<LI><STRONG><A NAME="00240" HREF="msg00240.html">Re: dubbi</A></STRONG>
+<UL><LI><EM>From:</EM> Francesco Potorti`</LI></UL></LI>
+</UL></LI></UL>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00251.html">Re: Aiuto per la licenza fdl</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00253.html">Re: dubbi (acknowledgment)</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00240.html">Re: dubbi</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00253.html">Re: dubbi (acknowledgment)</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail18.html#00252"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd18.html#00252"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+</BODY>
+</HTML>

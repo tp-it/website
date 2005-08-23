@@ -1,0 +1,253 @@
+<!-- MHonArc v2.4.4 -->
+<!--X-Subject: race condition &#45;&#45;> corsa critica -->
+<!--X-From-R13: Tenaprfpb Bbgbegv` <cbgNtah.bet> -->
+<!--X-Date: Sat, 15 Apr 2000 13:35:14 +0200 -->
+<!--X-Message-Id: E12gQpP&#45;000738&#45;00@pot.cnuce.cnr.it -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>race condition --&gt; corsa critica</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css" TITLE="style">
+<LINK REV="made" HREF="mailto:pot@gnu.org">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+	<TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="5">
+	<TR><TD WIDTH="100%" BGCOLOR="#99CCFF" ALIGN="CENTER"><B>
+	<FONT COLOR="#000000" SIZE=+1>Francesco Potorti` on Sat, 15 Apr 2000 13:35:14 +0200
+	</FONT></B></TD></TR></TABLE>
+<P>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<P><BR>
+[<A HREF="msg00157.html">Date Prev</A>] [<A HREF="msg00159.html">Date Next</A>] [<A HREF="msg00211.html">Thread Prev</A>] [<A HREF="msg00157.html">Thread Next</A>] [<A
+HREF="mail21.html#00158">Date Index</A>] [<A
+HREF="thrd20.html#00158">Thread Index</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<P>
+	<TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="5">
+	<TR><TD WIDTH="100%" BGCOLOR="#FFF0D0"><FONT COLOR="#000000">
+        <B>race condition --&gt; corsa critica</B>
+	</FONT></TD></TR> </table>
+<P>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>To</em>: <A HREF="mailto:it@DOMAIN.HIDDEN">it@xxxxxx</A></LI>
+<LI><em>Subject</em>: race condition --&gt; corsa critica</LI>
+<LI><em>From</em>: Francesco Potorti` &lt;<A HREF="mailto:pot@DOMAIN.HIDDEN">pot@xxxxxxx</A>&gt;</LI>
+<LI><em>Date</em>: Sat, 15 Apr 2000 13:33:31 +0200</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Siamo arrivati al punto che:
+
+- in  passato  eravamo arrivati  alla  conclusione  che  l'uso di  corsa
+  critica  era limitato  all'ambito  hardware.  Benché  il concetto  sia
+  essenzialmente  lo stesso,  e benché  corsa critica  sembri  una buona
+  traduzione di  race condition in  ambito software, non si  era trovata
+  alcuna  evidenza d'uso  del  termine in  ambito  software.  Di  questa
+  discussione, ripresa diverse volte,  propongo degli stralci in fondo a
+  questo  messaggio.   Ricordo   che  sono  ricavati  da  &lt;URL:<A  HREF="ftp://fly">ftp://fly</A>
+  .cnuce.cnr.it/pub/it.li.org.old.bz2&gt;, che è un archivio parziale della
+  lista contenente tutti i miei messaggi e solo parte degli altri.
+
+- Il  discorso è  stato appena  ripreso, riproponendo  la  traduzione in
+  oggetto.  Ci sono evidenze dell'uso in ambito accademico, e almeno una
+  evidenza  di  comprensibilità in  pratica  in  ambito non  accademico.
+
+- La traduzione  è utilizzata nella diffusissima  traduzione italiana di
+  "Modern  operating  systems"  di  Tanenbaum.   Fra  parentesi,  a  chi
+  interessa consiglio Silberschatz: "operating systems concepts", che mi
+  sembra  più bello  e  certamente  più moderno.   Ne  esiste anche  una
+  traduzione in italiano.  Se qualcuno ce l'ha, potrebbe verificare come
+  è tradotto lì.
+
+Propongo  di  continuare  la  discussione, invitando  ognuno  a  cercare
+evidenze  dell'uso  o  anche  semplicemente  della  comprensibilità  del
+termine corsa critica  in ambito non accademico e  a riportare eventuali
+risultati.
+
+
+
+Riguardo alle ricerche sui documenti in rete, i risultati sono ambigui.
+
+Ho cercato con altavista documenti  italiani che usino "corsa critica" e
+"race condition" (in versione singolare o plurale).  Eliminando le poche
+pagine che si riferiscono all'hardware,  ho trovato 9 risultati per race
+condition, di cui 3 in ambito  non accademico, e 7 per corsa critica, di
+cui 3 in ambito non accademico, quindi siamo pari.
+
+Comunque, voglio mettere in rilievo che in rete non ci sono solo perle,
+si trova qualunque schifezza.  Ho fatto anche una ricerca sui documenti
+italiani che usano "indirizzario":
+
+<A  HREF="http://www.altavista.com/cgi-bin/query?hl=on&amp;q=indirizzario+or+">http://www.altavista.com/cgi-bin/query?hl=on&amp;q=indirizzario+or+</A>
+indirizzari&amp;search=Search&amp;r=disco+dischi+file+system+directory
+&amp;kl=it&amp;pg=aq&amp;text=yes&amp;d0=&amp;d1=
+
+Ho trovato più di mille pagine.  Fra le prime trenta, almeno una ventina
+trattano effettivamente di argomenti informatici.
+
+
+Seguono stralci di passate sicussioni sull'argomento.
+================================================================
+Date: 25 Aug 1998 14:23:40 +0200
+From: Francesco Potorti` &lt;F.Potorti@cnuce.cnr.it&gt;
+
+    &gt;race condition --&gt; alea
+   Non mi sembra che si fosse raggiunto un consenso. Per capire questo
+   serve un background in computer science (io non ne ho uno eppure so
+   cos'e` una race condition).
+
+Errore mio.  Io stesso, in un mio precedente messaggio, scrivevo: 
+
+   Io mi ricordavo che alea indica lo stato in cui un segnale logico non
+   e` logico :-), cioe' in cui si trova in mezzo fra 0 e 1.  Ricordo male?
+
+In effetti,  questo  stato si  raggiunge  a causa di una  race condition
+sulla logica,  e   nella    terminologia  dei  circuiti  si   parla   di
+ricerca/eliminazione  delle  alee, intendendo ricerca/eliminazione delle
+condizioni che possono portare a stati  logici inconsistenti.  Pero` non
+sono  sicuro se quel che  ricordo e` preciso, ne`  se poi  in pratica si
+dica alea per intendere race condition.  Nessuno lo sa?
+
+
+Date: 1 Sep 1998 14:55:44 +0200
+From: Francesco Potorti` &lt;F.Potorti@cnuce.cnr.it&gt;
+
+   Confermo. glitch=alea statica nei circuiti elettronici.
+
+Perfetto.  Quindi si puo` aggiungere al dizionario
+glitch --&gt; alea
+
+oppure non aggiungerlo, visto che  forse non si  incontrera` mai.  E quindi
+l'unico candidato per "race condition" rimane "corsa critica", che pero` ha
+bisogno di qualche  supporto in  piu`.  In pratica,   non siamo sicuri  che
+venga effettivamente usato in pratica in italiano.
+
+
+Date: 11 Feb 1999 10:26:27 +0100
+From: Francesco Potorti` &lt;F.Potorti@cnuce.cnr.it&gt;
+
+   Cosa usano i testi italiani d'informatica per rendere il concetto?
+   
+Se n'e` parlato un sacco.  La traduzione piu` ragionevole e` corse
+critiche.
+
+Benche` molti fossero favorevoli, non mi pare che si fosse raggiunto un
+punto di concordia sufficiente.  Tuttavia sul glossario e` registrato come
+"invariato".  Marco, una svista o sono io che non ricordo?
+
+
+Date: 15 Feb 1999 14:24:15 +0100
+From: Francesco Potorti` &lt;F.Potorti@cnuce.cnr.it&gt;
+
+   &gt; Nonmi sembra che si fosse deciso di tradurlo o che qualcuno avesse
+   &gt; portato prove dell'uso di "corsa critica" nel real world.
+   
+   Ci sono nei miei libri di Misure Elettroniche... che pero' ho venduto...
+   vedo se ne recupero una qualche copia da qualche parte.
+
+No, non vanno bene.  Corsa critica va sicuramente bene quando si parla di
+elettronica, qui invece e` un problema software.  E` in quest'ultimo campo
+che non si e` raggiunto un accordo, e probabilmente Marco ha ritenuto che
+consigliare di non tradurlo fosse la cosa piu` saggia.
+
+
+Date: 15 Feb 1999 14:28:06 +0100
+From: Francesco Potorti` &lt;F.Potorti@cnuce.cnr.it&gt;
+
+   &gt; Nonmi sembra che si fosse deciso di tradurlo o che qualcuno avesse
+   &gt; portato prove dell'uso di "corsa critica" nel real world.
+   
+   corsa critica e' sbagliato.
+
+Nell'elettronica digitale e` la traduzione usata in pratica.
+
+   race e' aggettivale (un sostantivo usato come aggettivo) e quindi non
+   va tradotto come sostantivo (il sostantivo e' condition), ma con un
+   aggettivo che dia l'idea di velocita'/tempo ristretto/etc.
+   
+Si`, ma non e` infatti una traduzione letterale.
+
+   condizione critica e' la migliore approssimazione in italiano, IMHO.
+   
+Parli dell'ambito software?  Se si`, e` usato in pratica?  Cioe`, tu lo
+usi, o altri che conosci lo usano, o l'hai letto da qualche parte?
+
+Mi pare comunque una strana traduzione, non so se la capirei trovandola in
+italiano.  Ci devo pensare.
+
+
+Date: 15 Jun 1999 01:22:59 +0200
+From: Francesco Potorti` &lt;F.Potorti@cnuce.cnr.it&gt;
+
+   Tra l'altro `race condition' e` tra gli invariati. Bohh, dopo aver parlato
+   per giorni di «corse critiche» con vari conoscenti ci sono rimasto un po'
+   male.
+
+Ci furono, almeno a due  riprese, lunghe discussioni durante le quali molte
+persone riportarono  le loro  esperienze in diversi  ambiti sull'argomento.
+La  conclusione  universalmente accettata  fu  che  "corsa  critica" e`  un
+termine hardware, che solo impropriamente  e` da qualcuno (e solo qualcuno)
+estesa  al software.   In  quest'ultimo campo,  infatti,  il termine  quasi
+universalmente utilizzato e` appunto "race condition" (femminile).
+
+Date: 15 Jun 1999 01:29:18 +0200
+From: Francesco Potorti` &lt;F.Potorti@cnuce.cnr.it&gt;
+
+   `Race condition'
+
+Femmina (da aggiungere nel glossario).
+
+ (che per me resta «corsa critica»)?
+
+No, vedi mio messaggio precedente.
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00157.html">pagina web</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00159.html">Re: VIM-Editor-HowTo</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00211.html">Re: Alcune domande da gnumeric</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00157.html">pagina web</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail21.html#00158"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd20.html#00158"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+</BODY>
+</HTML>

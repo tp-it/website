@@ -1,0 +1,197 @@
+From owner-it@li.org Sun Feb 14 22:04:58 1999
+Delivered-To: md@wonderland.linux.it
+Received: by wonderland.linux.it (Postfix, from userid 10)
+	id 610B798C6; Sun, 14 Feb 1999 22:04:57 +0100 (CET)
+Received: (from uucp@localhost)
+	by giano.linux.it (8.8.8/8.8.8/Md) with UUCP id SAA15895
+	for md@wonderland.linux.it; Sun, 14 Feb 1999 18:20:08 +0100
+Received: from miranda.li.org (li.org [209.81.8.248])
+	by kirk.linux.it (8.8.8/8.8.8/Debian/GNU) with ESMTP id RAA29074
+	for <md@linux.it>; Sun, 14 Feb 1999 17:38:15 +0100
+Received: (from majordom@localhost)
+	by miranda.li.org (8.8.7/8.8.7) id JAA04697
+	for it-list; Sun, 14 Feb 1999 09:29:12 -0800
+Received: from apollo.evo.it (qmailr@apollo.evo.it [194.184.29.6])
+	by miranda.li.org (8.8.7/8.8.7) with SMTP id JAA04693
+	for <it@li.org>; Sun, 14 Feb 1999 09:29:08 -0800
+Received: (qmail 1906 invoked from network); 14 Feb 1999 17:19:11 -0000
+Received: from ppp8.evo.it (daniele@194.184.29.207)
+  by apollo.evo.it with SMTP; 14 Feb 1999 17:19:11 -0000
+Date: Sun, 14 Feb 1999 18:19:45 +0100 (CET)
+From: daniele giacomini <daniele@evo.it>
+X-Sender: daniele@dinkel.brot.dg
+To: it@li.org
+Subject: Tipografia
+Message-ID: <Pine.LNX.4.04.9902141616470.1265-100000@dinkel.brot.dg>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=iso-8859-1
+Content-Transfer-Encoding: 8BIT
+Sender: owner-it@li.org
+Precedence: bulk
+Reply-To: it@li.org
+Return-Path: <owner-it@li.org>
+Status: RO
+X-Status: A
+Content-Length: 5691
+Lines: 124
+
+Salve a tutti. Oggi ho dedicato molto tempo alla lettura dei
+documenti che si trovano presso http://ape.apenet.it/Grafica/ e ho
+trovato un file molto importante che invito gli interessati a scaricare
+e a studiare attentamente. In particolare, alla sezione ``1.6.1. Studio
+dei caratteri e loro identificazione onomastica'' si legge:
+
+   [...] l'unica difficoltà consiste nella traduzione di termini
+   tecnici, tra i quali i più correnti (in lingua inglese, francese,
+   tedesca) sono di seguito elencati con i corrispondenti vocaboli
+   italiani:
+   
+    1. - carattere, i. printing types, f. caractères, t. Drucktypen
+    2. - occhio, i. face, f. oeil, t. Gesicht, Auge, Schriftbild
+    3. - asta, i. stem, f. plein, haste, t. Abstrich
+    4. - asta chiara, i. hair line, f. déliè, t. Haarlinie
+    5. - terminali, grazie, i. serifs, f. empattements, t. Serifen
+    6. - corpo, i. body size, f. corps, t. Schriftkegel
+    7. - larghezza, i. set, width, f. chasse, t. Dichte
+    8. - altezza, i. height to paper, f. hauter, t. Schrifthöhe
+    9. - caratteri di testo, i. book face, f. caractére d'édition,t.
+       Buchschrift
+   10. - caratteri estratesto, i. display faces, f. caractére de ville,
+       t. Akzidenzschriften
+   11. - tondo, i. roman, f. droit, t. aufrecht
+   12. - corsivo, i. italic, f. italique, t. kursiv
+   13. - minuscolo, i. lower case, f. minuscules, t. KIeinbuchstabe
+   14. - maiuscolo, i. capitals, caps, f. capitales, t. Versalien,
+       Grossbuchstabe
+   15. - maiuscoletto, i. small capitals, f. petites capitales, t.
+       Kapitälchen
+   16. - chiaro, i. light, f. maigre, t. mager
+   17. - normale, i. medium, f normal, t. gewönlich
+   18. - neretto, i. medium, f. normal, t. halbfett
+   19. - nero, i. bold, f. gras, t. fett
+   20. - largo, i. expanded, f. large, t. breit
+   21. - stretto, i. condensed, f. allongé, t. schmal
+   22. - scrittura, i. script, f. écriture, t. Schreibschrift
+   23. - contornato, i. open, f. ombré, t. offen
+   24. - filettato (esternam.), i. outline, f. fileté, t. umstochen
+   25. - filettato, i. inline, f. éclairé, t. licht
+   26. - ombreggiato, i. shadow, f. ombré, t. schattiert
+   27. - tridimensionale, i. three dimensional, f. plastique, t.
+       piastisch
+   28. - bianchi, i. forniture, f. blancs, t. Blindmaterial
+   29. - interlineatura, i. to lead, f. interligned, t. durchschiessen
+   30. - cifre, i. figures, f. chiffres, t. Ziffern
+   31. - filetti, i. rules, f. filets, t. Linien
+   32. - fonderia, i. foundry, t. fonderie, t. Giesserei
+   33. - composizione, i. setting, composing, f. composition, t. setzen.
+
+Qualcuno chiedeva come tradurre ``foundry''. Ecco: ``fonderia''.
+
+Propongo di aprire una sezione specifica nel glossario e di inserirvi
+molti di questi termini.
+
+
+Sempre leggendo lo stesso documento, si trova la definizione di
+serie, stile e fonte. Nella sezione 1.8.2. ``Nomenclatura'' si trova
+un riassunto di tutto, solo che credo sia sfuggito un errore
+all'autore (lo si determina leggendo il resto del documento).
+Quello che segue e` l'elenco di definizioni di quella sezione,
+con la mia annotazione sulla classificazione.
+
+    1. - genere. Fondamentale raggruppamento dei componenti grafici in
+       ordine alla più ampia classificazione inerente alla essenza dei
+       componenti stessi: segni alfabetici e paralfabetici, segni
+       estralfabetici, fregi, iconografie, paraiconografie;
+    2. - specie. Suddivisione effettuata in base a criteri etnici e
+       linguistici (caratteri latini, ebraici, greci, cirillici, ecc.);
+    3. - gruppo stilistico. Complesso di famiglie di caratteri alfabetici
+       presentanti comuni caratteristiche stilistiche;
+    4. - famiglie di serie. Complesso delle serie di caratteri alfabetici
+       di un determinato stile;
+    5. - stile. Variazione di uno stesso stile di carattere in ordine
+serie--->^^^^^
+       alla pendenza (tondo, corsivo), al tono (chiarissimo, chiaro,
+       normale, neretto, nero, nerissimo), alla larghezza (dallo
+       strettissimo al larghissimo), all'ornamentazione (semplice,
+       ornato), all'inversione (positivo, negativo);
+    6. - fonte. Vocabolo usato dagli anglofoni, ma scarsamente usato
+       altrove; indica l'assortimento completo di caratteri di un
+       tipoplesso, potrebbe essere impiegato come equivalente di
+       tipoplesso;
+    7. - tipoplesso. Dispositivo proprio dei vari metodi di composizione
+       (cassa tipografica, magazzino o telaio di matrici, elemento di
+       dattilocomposizione, plesso di matrici per fotocomposizione:
+       disco, segmento di disco, nastro, griglia, plesso elettronico,
+       ecc.);
+    8. - polizza. Elenco di segni ed elementi connessi componibili di un
+       tipoplesso;
+    9. - scala di corpi. Complesso dei corpi, ossia delle grandezze nelle
+       quali una serie è tipizzata o tipizzabile.
+
+Da questo e dal resto che ho letto credo che si debbano tradurre:
+
+font -> fonte
+family -> stile
+serie/series -> serie (vedi \bfseries di LaTeX)
+shape -> forma (vedi \itshape di LaTeX)
+
+In particolare, anche se ``fonte'' non nasce dalla tipografia italiana,
+credo che sia sempre meglio di ``tipoplesso''. Infine, anche se il
+dizionario panlatino propone la traduzione di font come polizza di
+caratteri, credo che questo modo sia sbagliato, da quello che si legge
+nel documento che vi ho indicato.
+
+Si possono aggiungere nel glossario?
+Almeno discutetene, ci ho messo diverse ore per trovare quello che vi ho
+scritto :-)
+
+PS: se morite dalla voglia di scaricarvi tutto il documento, si può usare
+wget:
+
+    $ wget --mirror --no-parent --convert-links -nH http://ape.apenet.it/Grafica/
+
+
+saluti/regards/gruesse, 
+daniele giacomini - Treviso, Italy
+
+
+
+
+
+
+
+From md@linux.it Sun Feb 14 22:45:09 1999
+From md@linux.it Sun Feb 14 22:45:09 1999
+Delivered-To: md@wonderland.linux.it
+Received: by wonderland.linux.it (Postfix, from userid 1001)
+	id 6479B98C3; Sun, 14 Feb 1999 22:45:09 +0100 (CET)
+Date: Sun, 14 Feb 1999 22:45:09 +0100
+To: it@li.org
+Subject: Re: Tipografia
+Message-ID: <19990214224509.B3592@wonderland.linux.it>
+Mail-Followup-To: it@li.org
+References: <Pine.LNX.4.04.9902141616470.1265-100000@dinkel.brot.dg>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Mailer: Mutt 0.95.1i
+In-Reply-To: <Pine.LNX.4.04.9902141616470.1265-100000@dinkel.brot.dg>; from daniele giacomini on Sun, Feb 14, 1999 at 06:19:45PM +0100
+Return-Path: <md@linux.it>
+From: md@linux.it (Marco d'Itri)
+Status: RO
+Content-Length: 383
+Lines: 13
+
+On Feb 14, daniele giacomini <daniele@evo.it> wrote:
+
+ >Si possono aggiungere nel glossario?
+Lo aggiungo come un file separato, ma obietto alla traduzione di font,
+che se al limite puo` andare bene nella tipografia tradizionale (ma non
+e` usato, per ammissione degli autori stessi) non viene usato nel campo
+del DTP e dell'informatica.
+Meglio lasciarlo in inglese.
+
+-- 
+ciao,
+Marco
+
+

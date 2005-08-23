@@ -1,0 +1,260 @@
+* Invariati:
+account
+applet [f]
+backtrace
+bridge [il dispositivo di rete]
+broadcast
+buffer [m]
+carriage return [idem per i nomi degli altri caratteri di controllo]
+client
+core dump [to dump core -> fare un core dump]
+database
+debugging
+desktop
+device driver
+device file [m] [le cose in /dev]
+digest [m]
+directory [f]
+drag & drop
+drive
+editor
+fifo [m]
+file system [m]
+firewall [m]
+firmware
+focus [di una finestra]
+group id
+handshake
+header [riferito a un protocollo, etc]
+home directory [f]
+inline [riferito alla compilazione di una funzione]
+input method
+interrupt
+kernel
+link, to [file]
+linker [ld(1)]
+lock
+log, to
+loopback
+lvalue
+masquerading
+menu [senza accento]
+message digest
+mount point
+multicast
+name server
+netmask
+nick [IRC, ecc.]
+offset
+overrun
+password [f]
+patch [f]
+pipe [f]
+profile, to
+prompt
+porting
+race (condition) [f]
+ramdisk
+record [m] [di un archivio o database]
+release
+root file system
+router
+rvalue
+scheduler
+script [m]
+seek
+server
+shell [f]
+shutdown
+socket [m]
+spooler
+stack [m] [di un programma]
+standard input
+standard output
+standard error
+sticky bit
+stream [m] [di un socket. Altrimenti "flusso".]
+subshell [f]
+task
+toolkit [di X11]
+underrun
+user id
+window manager
+
+* Tradotti:
+... stopped by signal ...	... fermato dal segnale ...
+... terminated by signal ...	... terminato dal segnale ...
+alert				avviso
+append, to			accodare
+argument			argomento [di una funzione]
+assemble, to			assemblare
+assembler			assemblatore [es: as(1)]
+associative array		array associativo
+authentication			autenticazione
+autoprobe			autorilevamento
+background			sullo sfondo [un processo, una finestra]
+backticks			apici inversi
+bad				non valido [??? dipende troppo dal contesto]
+bigrams				bigrammi
+bookmark			segnalibro
+breakpoint			punto di interruzione
+break, to			forzare [crittografia, sicurezza]
+buffered			bufferizzato
+caret				(accento) circonflesso
+character set			set di caratteri
+checkbox			casella
+checksum			codice di controllo
+child				(processo) figlio
+clear high bit			azzera il bit piu` alto
+click, to			fare clic su...
+collation			collazione
+command line			riga di comando
+compound document		documento composito
+consistent			coerente
+corrupt				danneggiato
+cryptography			crittografia
+cypher, to			cifrare
+daemon				demone
+deadlock			stallo
+day-light saving time		ora estiva
+decipher, to			decifrare
+default	(value)			(valore) predefinito
+dereference, to			dereferenziare
+device [hardware]		dispositivo
+disclaimer			liberatoria
+display, to			visualizzare
+download, to			scaricare
+echo, to			emettere [riferendosi a un carattere] [?]
+edit, to			editare [???]
+effective userid/groupid	userid/groupid efficace
+encrypt, to			cifrare
+endpoint			estremità [di una connessione]
+entry				voce
+escape sequence			sequenza di escape
+exception			eccezione
+factory				fabbrica [GUI]
+fallback			ripiego
+field				campo
+floating point			virgola mobile
+floating point exception	errore di virgola mobile
+folder				cartella
+foreground			in primo piano [un processo, una finestra]
+background			sfondo [colore di...]
+flaw				difetto
+flood fill			campitura [grafica]
+flush, to			svuotare
+font				tipo di carattere
+forward, to			inoltrare [riguardo all'email]
+frame				trama [telecom.] [in certi casi non si traduce]
+free software			software libero
+hash table			tabella hash
+highlight			evidenziare [con il mouse, ecc.]
+history				cronologia
+handle, to			gestire
+history				cronologia [in un browser, ecc.]
+human readable			leggibile [umanamente comprensibile?]
+idle				inattivo
+illegal				illecito
+kill				uccidere [un processo]
+leap second			secondo intercalare
+locale				localizzazione
+lock a file, to			fare il lock di un file
+lock file			file di lock
+lossless			senza perdite [compressione dati]
+lossy				con perdite
+major/minor number		numero primario/secondario [di un device]
+man page			pagina di manuale
+mask				maschera
+masking				mascheramento
+match				corrispondenza
+maximize			massimizza [GUI]
+minimize			minimizza [GUI]
+mode				modo [di un file]
+mode-less			senza modi [di un file]
+modifier			modificatore [tasto]
+mount, to			montare
+named pipe			pipe con nome
+non-blocking I/O		I/O non bloccante
+package				pacchetto
+package, to			impacchettare
+pager				paginatore
+paging				paginazione
+parent directory/process	directory/processo padre
+path				percorso
+pattern				modello [regex]
+pattern				trama [grafica]
+permission			permessi
+port				porta
+print, to			stampare
+quit, to			abbandonare, lasciare [l'applicazione]
+query				interrogazione
+quotas, disk			quote d'uso [del disco]
+quote, to [nella shell]		proteggere
+range				intervallo
+redirect, to			redirigere
+regular file			file regolare
+regular expression		espressione regolare
+relocate, to			rilocare [un simbolo]
+return, to			restituire [un valore, da una funzione]
+route				instradamento [?] [aspettiamo esempi]
+route, to			instradare
+save as				salva come
+salt				sale [di un PRNG]
+scan, to			scandire [operazione fatta da uno scanner]
+scrolling pane			pannello di scorrimento
+set, to				impostare
+real userid/groupid		userid/groupid reale
+redo				ripristina
+referenced			referenziati
+relay, to			fare (il) relaying
+reset, to			reimpostare, inizializzare
+resolv, to [DNS]		risolvere
+revert, to			ripristinare
+serif				grazie [p]
+scripting language		linguaggio di scriptin
+sheet				pagina [GUI]
+show, to			mostrare
+signal				segnale
+source				sorgenti [m]
+special block/char file		file speciale a blocchi/caratteri
+statement			istruzione [di un linguaggio]
+strict				rigoroso
+string				stringa
+subdirectory			sottodirectory
+support				[non c'e` accordo]
+swallowed application		applicazione inglobata
+symbol				simbolo [relativo al linking]
+synopsis			sintassi
+tab				linguetta [GUI]
+tail				coda
+testing framework		ambiente di test
+text segment			segmento text
+thumbnail			provino
+time zone			fuso orario
+timestamp o time	orario di <qualcosa>, ma dipende molto dal contesto
+tool				strumento
+toolbar				barra degli strumenti
+tray				carrello [del lettore di CD]
+trigraph			trigrammi
+undo				annulla
+unmatched ... quote		virgolette ... non accoppiate
+unmount, to			smontare
+unpack, to			estrarre [da un archivio]
+upload, to			caricare
+verbose				prolisso
+warning [segue messaggio]	attenzione
+wide character			carattere largo
+wildcard character		metacarattere
+window				finestra [GUI]
+wordwrap			a capo automatico
+
+* [p] plurale
+* [m] maschile
+* [f] indovina
+* [?] traduzione ancora dubbia - attendo commenti
+
+* Per ottenere un unico elenco ordinato alfabeticamente:
+* cat gl2|sort|grep -v ^\*
+
+* $Id: gl2,v 1.9 2001/08/11 10:55:49 md Exp $
+

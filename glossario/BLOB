@@ -1,0 +1,92 @@
+Ecco un po' di cose da organizzare meglio:
+
+=============================================================================
+ >    > - "remove" e` tradotto con "rimuove", cioe` si passa
+ >    >   dall'imperativo 2a persona all'indicativo 3a persona.
+ >   Questo rientra nel discorso globale di che tempo usare nelle
+ >   traduzioni.
+ >
+ >A suo tempo se ne era discusso, ma in linea teorica.  Qui abbiamo un
+ >grosso esempio di traduzione che usa coerentemente questa
+ >convenzione, con ottimi risultati.  Propongo quindi di adottarlo
+ >senz'altro come standard.
+
+
+In linea di massima si usa la forma impersonale o a volte il "voi", a seconda
+di cosa fornisce risultati migliori.
+
+=============================================================================
+Messaggi standard GNU (ce ne sono molti altri da aggiungere):
+
+msgid "Try `%s --help' for more information.\n"
+msgstr "Usare `%s --help' per ulteriori informazioni.\n"
+
+"Usage: %s [OPTION]... SOURCE [DEST]\n"
+"  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+Uso: %s [OPZIONE]... ORIGINE... [DEST]
+  o: %s [OPZIONE]... ORIGINE... DIRECTORY
+
+"  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+"  -V, --version-control=WORD   override the usual version control\n"
+"  -v, --verbose             explain what is being done\n"
+"      --help                display this help and exit\n"
+"      --version             display version information and exit\n"
+  -S, --suffix=SUFFISSO     cambia il solito suffisso dei backup
+  -V, --version-control=TIPO   usa il controllo di versione TIPO
+  -v, --verbose             spiega cosa sta facendo
+  --help      mostra questo aiuto ed esce
+  --version   stampa le informazioni sulla versione ed esce
+
+--opzione	same as ...
+--opzione	come ...
+
+msgstr "\nSegnalare i bug a <tar-bugs@gnu.org>.\n"
+
+=============================================================================
+Il suffisso dei backup è `~', a meno che sia impostato con --suffix oppure
+SIMPLE_BACKUP_SUFFIX. Il controllo di versione può essere impostato con
+--backup oppure VERSION_CONTROL, i valori sono:
+
+  t, numbered     fa backup numerati
+  nil, existing   numerati se esistono backup numerati, altrimenti semplici
+  never, simple   fa sempre backup semplici
+
+
+Il suffisso dei backup è ~, a meno che sia impostato con SIMPLE_BACKUP_SUFFIX.
+Il controllo di versione può essere impostato con VERSION_CONTROL, i valori
+sono:
+
+  none, off       non fa mai backup (anche se è specificato --backup)
+  numbered, t     fa backup numerati
+  existing, nil   numerati se esistono backup numerati, altrimenti semplici
+  simple, never   fa sempre backup semplici
+=============================================================================
+NON c'è garanzia; neppure di COMMERCIABILITÀ o IDONEITÀ AD UN PARTICOLARE
+SCOPO. È possibile ridistribuire copie di GNU %s nei termini della
+GNU General Public License.
+Per maggiori informazioni su questi argomenti vedere il file COPYING.
+
+Questo è software libero; si veda il sorgente per le condizioni di copiatura.
+NON c'è alcuna garanzia; neppure di COMMERCIABILITÀ o IDONEITÀ AD UN
+PARTICOLARE SCOPO, nei limiti permessi dalla legge.
+
+Ricordo che non ci e` consentito rimuovere il testo originale inglese della
+licenza e che questo non ha alcun valore legale ma puramente informativo.
+=============================================================================
+Traduzione degli HOWTO [Dalla]:
+
+- Il titolo resta all'originale (inglese), con il solo articolo "The
+Linux... -HOWTO" per omogeneita' tra tutti i documenti.
+
+- La data rimane l'originale (tradotto il nome del mese), e sempre per
+omogeneita' si puo' lasciare la versione nello stesso formato
+(vX.Y, GG MESE AAAA)
+
+- La riga <author> inalterata, e il nome del traduttore tra gli <abstract>
+(e' comunque vicina al nome dell'autore, e permette di aggiungere piu'
+informazioni, eventuale data di traduzione, traduttore precedente...
+
+=============================================================================
+
+$Id: BLOB,v 1.5 2000/03/31 21:59:10 md Exp $
+

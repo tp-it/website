@@ -1,0 +1,190 @@
+<!-- MHonArc v2.4.4 -->
+<!--X-Subject: Diskless&#45;HOWTO -->
+<!--X-From-R13: Tnoevmvb Egrsnav <s.fgrsNgvfpnyvarg.vg> -->
+<!--X-Date: Wed, 14 Jun 2000 19:45:24 +0200 -->
+<!--X-Message-Id: 3947E063.19F8DFAC@tiscalinet.it -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Diskless-HOWTO</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css" TITLE="style">
+<LINK REV="made" HREF="mailto:f.stef@tiscalinet.it">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+	<TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="5">
+	<TR><TD WIDTH="100%" BGCOLOR="#99CCFF" ALIGN="CENTER"><B>
+	<FONT COLOR="#000000" SIZE=+1>Fabrizio Stefani on Wed, 14 Jun 2000 19:45:24 +0200
+	</FONT></B></TD></TR></TABLE>
+<P>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<P><BR>
+[<A HREF="msg00318.html">Date Prev</A>] [<A HREF="msg00320.html">Date Next</A>] [<A HREF="msg00321.html">Thread Prev</A>] [<A HREF="msg00320.html">Thread Next</A>] [<A
+HREF="mail15.html#00319">Date Index</A>] [<A
+HREF="thrd14.html#00319">Thread Index</A>]
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<P>
+	<TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="5">
+	<TR><TD WIDTH="100%" BGCOLOR="#FFF0D0"><FONT COLOR="#000000">
+        <B>Diskless-HOWTO</B>
+	</FONT></TD></TR> </table>
+<P>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<UL>
+<LI><em>To</em>: <A HREF="mailto:it@DOMAIN.HIDDEN">it@xxxxxx</A></LI>
+<LI><em>Subject</em>: Diskless-HOWTO</LI>
+<LI><em>From</em>: Fabrizio Stefani &lt;<A HREF="mailto:f.stef@DOMAIN.HIDDEN">f.stef@xxxxxxxxxxxxx</A>&gt;</LI>
+<LI><em>Date</em>: Wed, 14 Jun 2000 19:43:31 +0000</LI>
+</UL>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<PRE>
+Il Diskless-HOWTO è praticamente pronto, :-)
+resta da aggiustare un po' la forma e magari risolvere
+i dubbi rimasti. :-(
+
+---
+  Netboot
+
+packet driver, come lo traduco?
+
+  In order for the bootrom to access the network card in your
+  diskless client you need a driver. Currently the bootrom only
+  supports so called packet drivers, which are normally used on
+  MS-DOS systems to interface a network stack with the hardware.
+  With this package only the packet driver binaries are required,
+  so you don't need to recompile anything here as well. You can
+  find precompiled packet drivers for many popular network cards
+  on any SimTel FTP mirror (it's called Crynwr packet driver col-
+  lection), and for those of you without internet access some of
+  those packet driver binaries are included with this package.
+  Another good source for a packet driver for your network card
+  might be it's manufacturer. At least the well known manufacturers
+  (3Com and SMC for example) provide packet drivers for their
+  complete product line. Those manufacturer provided packet drivers
+  are usually faster and easier to install than those from the
+  Crynwr collection, and can sometimes determine the hardware
+  configuration at runtime, which the Crynwr drivers can't. However,
+  there is a limitation in that you can only use packet drivers
+  which are COM-type executables.
+
+l'idea è di lasciare "packet driver", voi che dite?
+
+---
+
+  RFC 951
+  Bootstrap Protocol
+
+  7.2. Client Retransmission Strategy
+
+  If no reply is received for a certain length of time, the client
+  should retransmit the request.  The time interval must be chosen
+  carefully so as not to flood the network. 
+  [...]
+
+  As a possible strategy, you might consider backing off
+  exponentially, similar to the way ethernet backs off on a
+  collision.  So for example if the first packet is at time 0:00,
+  the second would be at :04, then :08, then :16, then :32, then
+  :64.  You should also randomize each time; this would be done
+  similar to the ethernet specification by starting with a mask and
+  'and'ing that with with a random number to get the first backoff.
+  On each succeeding backoff, the mask is increased in length by one
+  bit.  This doubles the average delay on each backoff.
+
+backoff = ?
+
+io ci vedo bene "rientro":
+
+  Come possibile strategia si potrebbe considerare un rientro
+  esponenziale, simile al modo in cui in ethernet si hanno i rientri
+  in seguito a collisioni. Così, ad esempio, se il primo pacchetto  
+  è a tempo 0:00, il secondo sarà a :04, poi :08, :16, :32, :64. 
+  Bisognerebbe anche rendere casuale ogni temporizzazione; ciò 
+  verrebbe fatto, in modo simile alle specifiche ethernet, iniziando
+  con una maschera e facendone l'"and" con un numero casuale 
+  ottenendo così il primo rientro. Per ogni rientro successivo la
+  maschera viene incrementata di un bit in lunghezza. Ciò raddoppia
+  il ritardo medio per ogni rientro. 
+ 
+ma sembra un termine tecnico, non so se è il caso di tradurlo.
+qualcuno si intende di ehternet?
+
+---
+
+  RFC 1533
+  DHCP Options and BOOTP Vendor Extensions
+
+  9.2. IP Address Lease Time
+
+  This option is used in a client request (DHCPDISCOVER or DHCPREQUEST)
+  to allow the client to request a lease time for the IP address.  In a
+  server reply (DHCPOFFER), a DHCP server uses this option to specify
+  the lease time it is willing to offer.
+
+lease time = tempo di affitto ?
+
+Non mi è chiara la faccenda dell'affitto di indirizzi IP.
+Mi sta bene che il server conceda un indirizzo IP a tempo determinato,
+ma perché "affittarlo"? Che se lo fa pagare???
+Comunqe, si dice tempo di "affitto" ("noleggio"??), "lease" 
+o magari "prestito"?
+
+---
+
+That's all folks!
+Bye,
+Fabrizio Stefani
+
+</PRE>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<HR>
+<UL><LI><STRONG>Follow-Ups</STRONG>:
+<UL>
+<LI><STRONG><A NAME="00320" HREF="msg00320.html">Re: Diskless-HOWTO</A></STRONG>
+<UL><LI><EM>From:</EM> Francesco Potorti`</LI></UL></LI>
+</UL></LI></UL>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<LI>Prev by Date:
+<STRONG><A HREF="msg00318.html">New PO file for `hello-1.3.26'</A></STRONG>
+</LI>
+<LI>Next by Date:
+<STRONG><A HREF="msg00320.html">Re: Diskless-HOWTO</A></STRONG>
+</LI>
+<LI>Prev by thread:
+<STRONG><A HREF="msg00321.html">gdm2.pot</A></STRONG>
+</LI>
+<LI>Next by thread:
+<STRONG><A HREF="msg00320.html">Re: Diskless-HOWTO</A></STRONG>
+</LI>
+<LI>Index(es):
+<UL>
+<LI><A HREF="mail15.html#00319"><STRONG>Date</STRONG></A></LI>
+<LI><A HREF="thrd14.html#00319"><STRONG>Thread</STRONG></A></LI>
+</UL>
+</LI>
+</UL>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+</BODY>
+</HTML>

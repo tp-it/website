@@ -1,0 +1,55 @@
+Ecco un blob di regole varie:
+
+Un termine inglese può assumere il genere che avrebbe se tradotto in italiano,
+oppure quello che suona meglio dandogli un significato italiano. In caso di
+dubbio è importante controllare l'uso comune (se esiste).
+
+Quando un termine inglese ha un significato più specifico della sua
+traduzione letterale, allora non viene tradotto. I nomi propri di un
+servizio o dispositivo (es: "traffic shaper") ricadono in questa categoria.
+
+Una traduzione largamente utilizzata sul campo deve essere privilegiata
+al momento della scelta. E` importante evitare che gli utenti esperti
+possano essere confusi da una traduzione.
+
+Se subito non fosse stato chiaro lo riformulo: gli utenti esperti devono
+trovare familiari le traduzioni scelte. Questa e` la nostra Prima Direttiva.
+
+Le traduzioni devono /tradurre/, e non /spiegare/. Se il traduttore crede
+che un manuale o una man page non sia facilmente comprensibile allora
+dovrebbe scrivere un HOWTO, ma non aggiungere ulteriori informazioni.
+Se l'autore non si e` sentito in dovere di essere più esplicito, allora non
+deve esserlo neppure il traduttore. Se si pensa che ci sia un errore nel
+testo originale allora e` necessario contattare l'autore e chiedere una
+conferma.
+
+Il glossario non deve essere utilizzato con sed, e` stato fatto per
+l'utilizzo da parte di persone che dovrebbero essere in grado di capire
+il contesto in cui un termine e` usato e se la voce del glossario e`
+applicabile alla particolare situazione.
+
+
+Il traduttore deve aggiungere nella sezione AUTHOR delle man page (e negli
+equivalenti per gli altri tipi di documento) una frase come "Documentazione
+tradotta da Tizio <tizio@provider.it>".
+
+Titoli delle man page:
+NAME			NOME
+SYNOPSIS/SYNTAX		SINTASSI
+DESCRIPTION		DESCRIZIONE
+OPTIONS			OPZIONI
+PARAMETERS		PARAMETRI
+RETURN VALUE		VALORE RESTITUITO
+ERRORS			ERRORI
+NOTES			NOTE
+HISTORY			STORIA
+BUGS			BUG
+SEE ALSO		VEDERE ANCHE
+CONFORMING TO		CONFORME A
+AUTHOR			AUTORE
+POSIX/GNU DETAILS	PARTICOLARI POSIX/GNU
+ENVIRONMENT VARIABLES	VARIABILI D'AMBIENTE
+ENVIRONMENT		AMBIENTE
+
+$Id: regole,v 1.4 1999/03/23 23:22:39 md Exp $
+
