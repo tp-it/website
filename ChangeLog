@@ -1,3 +1,12 @@
+2005-08-31  Emanuele Aina <emanuele.aina@gmail.com>
+
+	* *.html: modificato pesantemente il markup per renderlo più chiaro
+	e coerente
+	* index.html: modificato anche titolo, sottotitolo e introduzione,
+	cancellando il sommario
+	* progetti_traduzione.html: aggiunto il file
+	* index.html: aggiunto paragrafo al documento sui progetti
+
 2005-08-24  Emanuele Aina <emanuele.aina@gmail.com>
 
 	* glossario.html: aggiunto "miniatura" per "thumbnail"
