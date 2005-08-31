@@ -1,6 +1,13 @@
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 p {
     text-align: justify;
 }
 dt {
     font-weight: bold;
+}
+dd {
+    margin-bottom: 1.5em;
 }
