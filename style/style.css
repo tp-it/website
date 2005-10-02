@@ -26,3 +26,11 @@ dd {
     padding: 0.5em;
     background-color: #eed;
 }
+
+h4 {
+    margin-top: 3em;
+}
+
+.nav {
+  text-align: right;
+}
