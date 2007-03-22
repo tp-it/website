@@ -1,0 +1,254 @@
+/* 
+   Quick OneChunk Docbook Stylesheet
+
+   Jakub Steiner <jimmac@novell.com>
+*/
+
+
+
+body {
+   font-family: "Bitstream Vera Sans", Sans-Serif;
+   font-size: 10pt;
+   max-width: 54em;
+	 margin: auto;
+}
+
+a {
+	color: #204a87
+}
+
+a:hover {
+	color: #729fcf;
+}
+
+p {
+   margin: 1em 4em 1.5em 2em;
+   text-align: justify;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 0 auto 1em;
+	width: 50em;
+	border: 1px solid #babdb6;
+}
+
+th {
+	text-align: left;
+	color: white;
+	background-color: #babdb6;
+}
+
+td {
+	padding: 6px;
+}
+
+ul {
+	margin: 1em 0em 2em 3em;
+	max-width: 44em;
+}
+
+ul li {
+	list-style-image: url('bullet.png');
+	margin-left: 0em;
+	padding: 2px 0px 0px 1em;
+}
+
+li p {
+	padding: 0px 0px 1em 0px;
+	margin: 0px;
+}
+
+div.authorgroup {
+	padding: 2em;
+	margin: 2em;
+  border: 1px solid #eee;
+  -moz-border-radius: 16px !important;
+	width: 40em;
+}
+
+.author, div.affiliation, div.address {
+	margin: 0px;
+}
+
+.address code {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* get rid of the line break in address */
+.address br {
+	display: none;
+}
+
+.address p {
+	padding: 0px;
+	margin: 0px 0px 1em 0px;
+}
+
+
+div.revhistory table {
+	border-collapse: separate;
+   font-size: 9pt;
+   border: 1px solid #eee;
+   -moz-border-radius: 16px !important;
+   padding: 1em;
+   margin: 1em;
+   max-width: 64em;
+}
+
+div.revhistory table th {
+   margin: 4px;
+   background-color: #f6f6f6;
+	 color: black;
+   padding: 2px;
+   border: 0px;
+}
+
+.revhistory p {
+	display: inline;
+}
+
+div.revhistory table td {
+   border: 0px;
+}
+
+div.toc {
+	margin: 2em 25em 0px 0px;
+}
+
+.toc>dl, .list-of-tables>dl, .list-of-examples>dl {
+	/* border: 1px solid #d3d7cf; */
+	margin-left: 4em;
+	margin-bottom: 4em;
+}
+
+.toc a, .list-of-tables a, .list-of-examples a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.section, .chapter, .appendix {
+	margin-top: 3em;
+}
+
+div.figure * {
+   text-align: center;
+}
+
+h1,h2,h3,h4,h5 {
+   color: #909090;
+}
+
+li * {
+   text-align: left;
+}
+
+hr {
+   border: 1px dotted #d3d7cf;
+	 width: 400px;
+	 margin: 4em auto;
+}
+
+.note {
+   border: 1px dotted #d3d7cf;
+   background-color: #efefef;
+   padding: 0px 1em 1em 1em;
+   font-size: 8pt;
+   -moz-border-radius: 8px;
+	 margin: 1em;
+}
+
+.tip {
+   border: 1px solid #eeeeee;
+   padding: 0px 1em 1em 1em;
+   font-size: 8pt;
+   -moz-border-radius: 16px;
+	 margin: 1em;
+}
+
+.command,.interface {
+   color: #808080;
+}
+
+.keycap {
+   color: #808080;
+   background-color: #eeeeee;
+   padding: 2px;
+   border: 1px solid #707070;
+   -moz-border-radius: 6px;
+   font-weight: bold;
+}
+
+.guimenuitem {
+   color: #808080;
+   background-color: #eeeeee;
+   font-weight: bold;
+}
+
+.figure {
+   color: #707070;
+   background-color: #eeeeee;
+   font-weight: bold;
+   border: 1px solid #a0a0a0;
+   -moz-border-radius: 6px;
+   margin-left: 2em;
+   margin-right: 4em;
+}
+
+.figure .title {
+   text-align: left;
+}
+
+.example {
+	 max-width: 48em;
+   background-color: #eeeeee;
+   border: 1px solid #a0a0a0;
+   -moz-border-radius: 8px;
+	 margin: 2em ;
+}
+
+.example .title {
+   color: #707070;
+   font-weight: bold;
+}
+
+.screen {
+	padding-left: 4em;
+	font-size: medium;
+}
+
+.programlisting {
+   margin-left: 2em;
+}
+
+.mediaobject {
+      margin: 1em;
+      overflow: auto; /* whoa this rocks ;) */
+      /* max-width: 400px; */
+      max-height: 420px;
+}
+
+.remark {
+   font-weight: bold;
+   background-color: yellow;
+}
+
+.markup {
+   font-weight: bold;
+   font-family: monospace;
+}
+
+.application {
+   font-weight: bold;
+   /* background-color: #f6f6f6; */
+   color: #202020;
+   /* border-bottom: 1px dotted #aaaaaa; */
+   padding: 0px;
+}
+
+img {
+   border: 0px;
+}
+
+

@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Gestione pratica delle traduzioni</title><link rel="stylesheet" href="docbook.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.68.1" /><meta name="description" content="Una introduzione alla gestione dei file PO e delle traduzioni." /><link rel="start" href="#index" title="Gestione pratica delle traduzioni" /><link rel="next" href="#introduzione" title="Introduzione" /></head><body><div class="article" lang="it" xml:lang="it"><div class="titlepage"><div><div><h1 class="title"><a id="index"></a>Gestione pratica delle traduzioni</h1></div><div><div class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">Luca</span> <span class="surname">Ferretti</span></h3><div class="affiliation"><span class="orgname">Italian GNOME Translation Project<br /></span><div class="address"><p> <code class="email">&lt;<a href="mailto:elle.uca AT infinito.it">elle.uca AT infinito.it</a>&gt;</code> </p></div></div></div></div></div><div><p class="releaseinfo">
+        Questo documento è una semplice introduzione alla traduzione dei
+	programmi per mezzo dei file PO, con un occhio di riguardo per la
+	traduzione di GNOME. Parte del lavoro è derivato da documenti
+        già disponibili in inglese presso lo
+        <a href="http://developer.gnome.org/projects/gtp/" target="_top">GTP - GNOME
+        Translation Project</a>.
+    </p></div><div><p class="copyright">Copyright © 2004 Luca Ferretti</p></div><div><div class="legalnotice"><a id="legalnotice"></a><p>
+    Questo documento può essere copiato, distribuito e/o modificato
+    solo in conformità con i termini della GNU Free Documentation
+    License (GFDL) Versione 1.1 o delle versioni successive 
+    pubblicate dalla Free Software Foundation senza sezioni 
+    invariabili, frontespizi e testi di copertina. Una copia
+    della GFDL è disponibile presso questo
+    <a href="ghelp:fdl" target="_top">collegamento</a>
+    o nel file COPYING-DOCS distribuito con questo manuale.
+  </p><p>
+    Questo manuale fa parte di una raccolta di manuali 
+    GNOME distribuita in conformità con la GFDL. Per poter 
+    distribuire questo manuale separatamente, è necessario
+    inserirvi una copia della licenza, come descritto nella
+    sezione 6 della licenza.
+  </p><p>
+    Molti dei nomi usati dalle aziende per distinguere i propri
+    prodotti e servizi sono rivendicati come marchi. Quando questi
+    nomi compaiono nella documentazione di GNOME, e i partecipanti
+    al GNOME Documentation Project sono consapevoli del loro 
+    utilizzo, essi vengono scritti in lettere maiuscole o con 
+    l'iniziale maiuscola.
+  </p><p>
+    QUESTO DOCUMENTO E LE SUE VERSIONI MODIFICATE VENGONO FORNITI 
+    IN BASE AI TERMINI DELLA GNU FREE DOCUMENTATION LICENSE,
+    CON L'INTESA CHE:
+
+    </p><div class="orderedlist"><ol type="1"><li><p>
+        IL DOCUMENTO VIENE FORNITO SENZA GARANZIE DI ALCUN 
+        TIPO, ESPLICITE O IMPLICITE, INCLUSE, MA SENZA 
+        IMITAZIONE, LE GARANZIE ATTESTANTI CHE IL 
+        DOCUMENTO O LE SUE VERSIONI MODIFICATE SIANO 
+        PRIVI DI DIFETTI, COMMERCIALIZZABILI, IDONEI A
+        UN DETERMINATO SCOPO O CHE NON VIOLINO DIRITTI
+        DI TERZI. SI DECLINA QUALUNQUE RESPONSABILITÀ 
+        RIGUARDO AI RISCHI INERENTI LA QUALITÀ, 
+        L'ACCURATEZZA E LE PRESTAZIONI DEL DOCUMENTO O
+        DI UNA SUA VERSIONE MODIFICATA. QUALORA UN 
+        DOCUMENTO O UNA SUA VERSIONE MODIFICATA DOVESSERO
+        PRESENTARE QUALUNQUE TIPO DI DIFETTO, IL COSTO DI 
+        EVENTUALI INTERVENTI DI ASSISTENZA, RIPARAZIONE
+        O CORREZIONE SARÀ A CARICO DELL'UTENTE (NON DEL 
+        REDATTORE INIZIALE, DELL'AUTORE O DI ALTRI 
+        COLLABORATORI). QUESTA LIMITAZIONE DELLA GARANZIA 
+        COSTITUISCE PARTE ESSENZIALE DELLA LICENZA. 
+        L'USO DEL DOCUMENTO O DELLE SUE VERSIONI MODIFICATE
+        È CONSENTITO SOLO ENTRO I TERMINI DI QUESTA 
+        LIMITAZIONE DELLA GARANZIA; 
+      </p></li><li><p>
+        IN NESSUNA CIRCOSTANZA E PER NESSUNA RAGIONE LEGALE, 
+        INCLUSI I PRINCIPI DI COLPA (INCLUSA LA NEGLIGENZA),
+        ACCORDO CONTRATTUALE O ALTRO, SARÀ POSSIBILE 
+        CONSIDERARE L'AUTORE, IL REDATTORE INIZIALE, GLI
+        ALTRI COLLABORATORI, QUALUNQUE DISTRIBUTORE DEL
+        DOCUMENTO O DI UNA SUA VERSIONE MODIFICATA O
+        QUALUNQUE FORNITORE DELLE PERSONE CITATE, 
+        RESPONSABILE NEI CONFRONTI DI QUALUNQUE PERSONA 
+        PER DANNI DIRETTI, INDIRETTI, SPECIALI, INCIDENTALI
+        O CONSEGUENTI DI QUALUNQUE NATURA, INCLUSI, MA
+        SENZA LIMITAZIONE, I DANNI PER PERDITA DI 
+        AVVIAMENTO, INTERRUZIONE DEL LAVORO, GUASTO O
+        MALFUNZIONAMENTO DEL COMPUTER O QUALUNQUE ALTRO 
+        DANNO O PERDITA DERIVANTE O CORRELATA ALL'USO DEL
+        DOCUMENTO O DI UNA SUA VERSIONE MODIFICATA,
+        ANCHE QUALORA LE PERSONE CITATE FOSSERO STATE
+        INFORMATE DELLA POSSIBILITÀ DI TALI DANNI.
+      </p></li></ol></div><p>
+  </p></div></div><div><div class="legalnotice"><a id="id2472178"></a><p class="legalnotice-title"><b>Commenti</b></p><p>
+        Per segnale errori o proporre suggerimenti su questo documento
+        contattare gli autori. Per ogni informazione consultare
+        il <a href="http://www.it.gnome.org" target="_top">sito italiano di 
+        GNOME</a>.
+      </p></div></div><div><div class="revhistory"><table border="1" width="100%" summary="Revision history"><tr><th align="left" valign="top" colspan="2"><b>Diario delle Revisioni</b></th></tr><tr><td align="left">Revisione Gestione pratica delle traduzioni, versione
+          0.0.1</td><td align="left">Dicembre 2005</td></tr><tr><td align="left" colspan="2">
+	  <p class="author">Luca Ferretti</p>
+	  <p class="publisher">Italian GNOME Team</p>
+	  <p>Prima versione del documento.</p>
+	</td></tr></table></div></div><div><div class="abstract"><p class="title"><b>Estratto</b></p><p>Una introduzione alla gestione dei file PO e delle traduzioni.</p></div></div></div><hr /></div><div class="toc"><p><b>Sommario</b></p><dl><dt><span class="sect1"><a href="#introduzione">Introduzione</a></span></dt><dt><span class="sect1"><a href="#gettext">Concetti di base</a></span></dt><dd><dl><dt><span class="sect2"><a href="#l10n-e-i18n">Internazionalizzazione e localizzazione</a></span></dt><dt><span class="sect2"><a href="#gettext-files">File necessari alla traduzione</a></span></dt><dt><span class="sect2"><a href="#gettext-tools">Strumenti vari</a></span></dt></dl></dd><dt><span class="sect1"><a href="#iniziare-una-traduzione">Iniziare una traduzione</a></span></dt><dd><dl><dt><span class="sect2"><a href="#procurarsi-file-po">Procurarsi un file po</a></span></dt><dt><span class="sect2"><a href="#editare-file-po">Editare i file PO</a></span></dt><dt><span class="sect2"><a href="#esempio-iniziale-file-po">Esempio iniziale di file po</a></span></dt><dt><span class="sect2"><a href="#operazioni-preliminari">Modifica dell'intestazione</a></span></dt><dt><span class="sect2"><a href="#fine-preliminari">Traduzione dei messaggi</a></span></dt><dt><span class="sect2"><a href="#verifica-traduzione">Verificare la traduzione</a></span></dt></dl></dd><dt><span class="sect1"><a href="#sintassi-file-po">Sintassi dei file PO</a></span></dt><dd><dl><dt><span class="sect2"><a href="#escape-sequences">Sequenze di escape</a></span></dt><dt><span class="sect2"><a href="#sostituzione-c">Sostituzione di variabile</a></span></dt><dt><span class="sect2"><a href="#sostituzione-posizione">Inversione di posizione</a></span></dt><dt><span class="sect2"><a href="#forme-plurali">Forme plurali</a></span></dt></dl></dd><dt><span class="sect1"><a href="#architettura-gnome">Architettura di GNOME</a></span></dt><dt><span class="sect1"><a href="#aggiornare-traduzione">Aggiornare una traduzione</a></span></dt><dt><span class="sect1"><a href="#emacs">Usare Emacs</a></span></dt><dd><dl><dt><span class="sect2"><a href="#emacs-intro">Introduzione ad Emacs</a></span></dt><dt><span class="sect2"><a href="#emacs-po-mode">Il po-mode di Emacs</a></span></dt><dt><span class="sect2"><a href="#emacs-navigazione">Navigare nei file PO</a></span></dt></dl></dd></dl></div><div class="sect1" lang="it" xml:lang="it"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="introduzione"></a>Introduzione</h2></div></div></div><p>
+  I programmi per lo <a href="http://www.it.gnome.org" target="_top">GNOME
+  Desktop</a> sono progettati per poter essere localizzati. Ciò
+  significa che una applicazione si comporta in modo diverso in diverse 
+  località del globo; ad esempio varia il formato dell'ora e della data o
+  l'indicazione dei valori di temperatura nelle scale Fahrenheit e Celsius ed
+  infine il linguaggio con cui l'utente si relaziona al programma è il 
+  linguaggio nativo dell'utente stesso.
+  </p><p>
+  La traduzione è la parte principale della localizzazione. La
+  traduzione dei programmi GNOME è fatta principalmente da volenterosi 
+  volontari: queste persone, prima del rilascio del software, si premurano di 
+  prelevare i messaggi originali in inglese, fornire la traduzione di tali
+  messaggi ed inviare il file contente tali informazioni da includere nel
+  software.
+  </p><p>
+  Questo documente intende descrivere tale procedimendo di traduzione. Nelle
+  pagine che seguono verranno anche presentati casi tipici in cui ci si
+  può imbattere durante la traduzione di uno dei componenti di GNOME,
+  con particolare attenzione a quelli che potrebbero essere definiti come 
+  aspetti “<span class="quote">tecnici</span>” della traduzione.
+  </p></div><div class="sect1" lang="it" xml:lang="it"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="gettext"></a>Concetti di base</h2></div></div></div><p>
+  La lingua inglese è utilizzata tanto nella coordinazione dello sviluppo
+  di una applicazione, quanto nei messaggi che questa presenta all'utente. L'uso
+  di una lingua comune infatti rende semplice la comunicazione tra le varie
+  parti. D'altro canto, assumere che gli utenti finali conoscano la lingua
+  inglese limita fortemente la diffusione dell'applicazione stessa.
+</p><p>
+  L'utilità <span class="application">gettext</span> del progetto
+  <a href="http://www.gnu.org" target="_top">GNU</a> fornisce degli strumenti che
+  consentono agli sviluppatori di <span class="emphasis"><em>marcare</em></span> certi
+  messaggi come traducibili, ai traduttori di tradurre tali messaggi ed agli
+  utenti di vederli tradotti nella lingua che hanno scelto di usare.
+</p><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="l10n-e-i18n"></a>Internazionalizzazione e localizzazione</h3></div></div></div><p>
+    Per <span class="emphasis"><em>internazionalizzazione</em></span> (spesso indicata nei testi
+    inglesi come “<span class="quote">i18n</span>” per abbreviare) si intende l'operazione
+    per mezzo della quale un programma o un gruppo di programmi sono messi in
+    grado di supportare diversi linguaggi.
+  </p><p>
+    Per <span class="emphasis"><em>localizzazione</em></span> (spesso indicata nei testi inglesi come
+    “<span class="quote">l10n</span>” per abbreviare), si intende l'operazione per mezzo della
+    quale vengono forniti ad un programma tutte le informazioni necessarie per
+    gestire i suoi ingressi ed uscite in un modo che risulti corretto in una 
+    certa lingua ed in un certo ambiente.
+  </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tradurre la directory Desktop</h3><p>
+    Per chiarire questa differenza, esaminiamo un caso reale che si sta
+    discutendo nei giorni in cui sto scrivendo questo documento: la
+    localizzazione dei nomi di directory standard.
+  </p><p>
+    Una esigenza degli sviluppatori e degli utenti di GNOME è quella di
+    poter permettere la traduzione di particolari directory che l'utente
+    puà avere nella propria directory home o nel file system. Una di tali
+    directory è quella di nome
+    <code class="filename">Desktop</code> posta nella home degli utenti
+  </p><p>
+    Il contenuto di tale directory viene "prelevato" ed usato in parte per
+    popolare la scrivania di GNOME, ossia quell'area dello schermo che si trova
+    sempre sullo sfondo dello schermo. 
+  </p><p>
+    Risulta evidente l'esigenza di mantenere univoco il nome della
+    directory: solo in questo modo è possibile garantire
+    l'interoperabilità tra programmi definendo uno standard che reciti:
+    “<span class="quote">i file da porre sulla scrivania sono sempre nella directory 
+    <code class="filename">Desktop</code> posta nella home degli
+    utenti</span>”.
+  </p><p>
+    Per risolvere tale problema bisogna
+    <span class="emphasis"><em>internazionalizzare</em></span> i programmi, definendo ed usando 
+    delle funzioni che operino più o meno come filtri: se stai visualizzando
+    quella directory, allora consulta l'archivio delle traduzioni e mostra a
+    video la traduzione associata per la lingua in uso. Se la traduzione per la
+    lingua in uso non c'è, allora vuol dire che quella
+    <span class="emphasis"><em>localizzazione</em></span> è incompleta o mancante.
+  </p></div><p>
+    Come suggerito dalla nota, il modo migliore per fornire un software tradotto
+    è di fornire delle tabelle per ogni lingua in cui si realizzi la
+    corrispondenza striga originale - stringa tradotta. Le varie
+    utilità che compongono <span class="application">gettext</span> permettono
+    di gestire queste corrispondenze tramite semplici file di testo.
+  </p></div><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="gettext-files"></a>File necessari alla traduzione</h3></div></div></div><p>
+      L'operazione di traduzione di un programma richiede da parte del
+      traduttore la modifica del cosiddetto “<span class="quote">file PO</span>”. 
+    </p><p>
+      PO significa <span class="emphasis"><em>Portable Object</em></span>, per distinguere tali
+      file dai file MO, ovvero <span class="emphasis"><em>Machine Object</em></span>. Il formato
+      di file PO è stato per la prima volta implementato dalla Sun sul sistema
+      Solaris, basandosi su uno standard della Uniforum.
+    </p><p>
+      Nei file PO si concretizza l'associazione tra ciascuna stringa originale
+      marcata come traducibile e la traduzione in una particolare lingua di
+      destinazione. Per ogni lingua supportata dal programma esiste un file
+      di nome <code class="filename"><em class="replaceable"><code>CODICE_LINGUA</code></em>.po</code>
+      che contiene tutte le stringhe marcate come traducibili e le loro
+      traduzioni. I file che hanno come estensione <code class="filename">.pot</code>
+      sono delle traduzioni “<span class="quote">vergini</span>”, contengono cioè solo le 
+      stringhe da tradurre ed i segnaposto per le traduzioni: tali file vanno
+      usati quando si comincia una nuova traduzione.
+    </p><p>
+      I file MO sono dei file binari pensati per essere letti dai programmi.
+      Sebbene derivino dai file PO, il formato di tali file può differire da
+      sistema a sistema. Nei sistemi GNU i file con estensione 
+      <code class="filename">.gmo</code> sono file MO nel formato GNU.
+    </p></div><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="gettext-tools"></a>Strumenti vari</h3></div></div></div><p>
+      Oltre ad una architettura utile agli sviluppatori per marcare le stringhe
+      da tradurre, <span class="application">gettext</span> fornisce dei programmi
+      utili per la creazione, l'aggiornamento, la fusione e la codifica dei 
+      file PO.
+    </p><p>
+      L'uso di questi programmi non verrà trattato, rimandando alla
+      già citata pagina Info di gettext ed alle pagine di manuale dei
+      relativi programmi.
+    </p><p>
+      è bene tenere presente che i progetti legati a GNOME fanno uso di
+      file sorgenti che non sono gestiti direttamente da
+      <span class="application">gettext</span>, come ad esempio i file con sintassi
+      XML. Per ovviare a questo problema vengono forniti delle utilità, 
+      raggruppate sotto il nome di <span class="application">intltool</span>, che
+      in pratica fanno da filtro. FIXME!!!
+    </p></div></div><div class="sect1" lang="it" xml:lang="it"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="iniziare-una-traduzione"></a>Iniziare una traduzione</h2></div></div></div><p>
+  In questa sezione sono descritti i passi necessarri per effettuare la prima
+  traduzione della propria vita. Vengono fornite informazioni sufficientemente 
+  dettagliate sul formato dei file PO; è necessario comunque premettere 
+  che una traduzione non banale richiede anche le informazioni presentate in
+  <a href="#sintassi-file-po" title="Sintassi dei file PO">la sezione chiamata “Sintassi dei file PO”</a> e in <a href="#architettura-gnome" title="Architettura di GNOME">la sezione chiamata “Architettura di GNOME”</a> 
+  </p><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="procurarsi-file-po"></a>Procurarsi un file po</h3></div></div></div><p>
+    Il modo più semplice di ottenere un file PO è di farselo dare da chi
+    già lo ha. In particolare della lista dei moduli orfani della pagina
+    dei traduttori italiani di GNOME e dalla lista delle statistiche di
+    traduzione di GNOME. (FIXME: inserire i rispettivi collegamenti)
+    </p><p>
+    I file PO qui disponibili sono generati in modo automatico ad intervalli 
+    regolari. Se si ha paura di pasticciare, questo è il modo consigliato
+    per procurarsi il file.
+    </p><p>
+    In alternativa è possibile crearsi da soli il file PO. Per fare
+    ciò è necessario avere sia i sorgenti dell'applicazione
+    (meglio se la versione di sviluppo da CVS), sia
+    <span class="application">intltool</span> installato nel proprio sistema.
+    </p><p>
+    Per creare quindi da soli un nuovo file pot si procede come segue:
+    </p><div class="itemizedlist"><ul type="disc"><li><p>aprire una finestra di <span class="application">Terminale</span></p></li><li><p>passare alla directory
+        <code class="filename"><em class="replaceable"><code>applicazione</code></em>/po/</code></p></li><li><p>eseguire il comando <span><strong class="command">intltool-update -p</strong></span></p></li></ul></div><p>
+    Se non vengono evidenziati errori, allora è stato creato il file
+    <code class="filename"><em class="replaceable"><code>applicazione</code></em>.pot</code>, ossia il
+    modello da usare per la propria traduzione.
+    </p><div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">In caso di errore</h3><p>
+    Qualora invece vengano evidenziati degli errori, allora è bene
+    segnalarli agli sviluppatori dell'applicazione. Spesso si tratta di
+    un aggiornamento dei file sorgenti dell'applicazione a cui non è
+    corrisposto un aggiornamento dei file marcati come contenti stringhe
+    traducibili. L'elenco di tali file è mantenuto nel file
+    <code class="filename">POTFILES.in</code> presente nella stessa directory
+    <code class="filename">po</code>. Per aggirare il problema prima
+    dell'intervento degli sviluppatori si puà provare ad eliminare da tale file
+    i riferimenti ai file che non sono stati trovati.
+    </p></div><p>
+    A questo punto è sufficiente copiare o rinominare il file
+    <code class="filename"><em class="replaceable"><code>applicazione</code></em>.pot</code> come 
+    <code class="filename">it.po</code> per proseguire poi con l'effettiva traduzione.
+    </p></div><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="editare-file-po"></a>Editare i file PO</h3></div></div></div><p>
+    I file PO, come preannunciato, non sono altro che file di testo semplice che
+    elencano le stringhe segnate come da tradurre dagli sviluppatori e lasciano
+    dello spazio per inserire le traduzioni. Ovviamente questi file debbono
+    rispettare una certa sintassi.
+    </p><p>
+    Per poterli editare è quindi sufficiente un editor di testo. L'unica
+    richiesta dei file PO per i moduli del progetto GNOME è che il file
+    PO sia codificato in UTF-8, quindi anche l'editor di testo deve poter
+    leggere e salvare in tale set di caratteri.
+    </p><p>
+    L'editor di testo fornito con lo GNOME Deskop è sufficiente per
+    iniziare a lavorare, ma non è adatto per la modifica e la
+    manutenzione di grosse traduzioni. Esistono programmi specifici per la
+    gestione dei file PO quali <span class="application">Gtranslator</span> e
+    <span class="application">KBabel</span> (questo secondo fa parte dell'ambiente 
+    desktop KDE), ma la loro descrizione esula dagli scopi di questo documento.
+    </p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Suggerimento</h3><p>
+      Ogni traduttore coraggioso usa come editor di testo
+      <span class="application">Emacs</span>. Questo infatti fornisce una
+      modalità detta <span class="emphasis"><em>po-mode</em></span> che rende
+      semplice la gestione di file di ogni dimensione. Per maggiori
+      informazioni, consultare <a href="#emacs" title="Usare Emacs">la sezione chiamata “Usare Emacs”</a>.
+      </p></div><p>
+    Una volta scelto quindi il proprio editor di testo o programma specifico per
+    i file PO preferito, per inizare la traduzione è sufficiente aprire
+    con questo il file <code class="filename">it.po</code> appena generato o scaricato
+    da Internet.
+    </p></div><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="esempio-iniziale-file-po"></a>Esempio iniziale di file po</h3></div></div></div><p>
+  Il seguente è un esempio di file PO appena generato; i numeri sulla
+  sinistra non compaiono nel file, ma saranno utili nel seguito per poter fare
+  riferimento ai vari elementi.
+  </p><pre class="programlisting">
+ 1  # SOME DESCRIPTIVE TITLE.
+ 2  # Copyright (C) YEAR Free Software Foundation, Inc.
+ 3  # FIRST AUTHOR &lt;EMAIL@ADDRESS&gt;, YEAR.
+ 4  #
+ 5  #, fuzzy
+ 6  msgid ""
+ 7  msgstr ""
+ 8  "Project-Id-Version: PACKAGE VERSION\n"
+ 9  "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+10  "Last-Translator: FULL NAME &lt;EMAIL@ADDRESS&gt;\n"
+11  "Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
+12  "MIME-Version: 1.0\n"
+13  "Content-Type: text/plain; charset=CHARSET\n"
+14  "Content-Transfer-Encoding: 8bit\n"
+15
+16  #: src/main.c:32
+17  msgid "First string"
+18  msgstr ""
+19  
+20  #: src/main.c:48
+21  msgid "Second string"
+22  msgstr ""
+</pre><p>
+  In questo file è possibile evidenziare:
+</p><div class="orderedlist"><ol type="1"><li><p>delle righe di commento, quelle che iniziano per
+      <code class="literal">#</code> (righe da 1 a 5, 16 e 20);</p></li><li><p>
+      un'intestazione con i dati della traduzione (righe da 6 a 14);</p></li><li><p>
+      due messaggi da tradurre (righe 17 e 21);</p></li><li><p>
+      due “<span class="quote">spazi liberi</span>” per le traduzioni dei messaggi (righe 18
+      e 22).</p></li></ol></div><p>
+  Ogni messaggio da tradurre è racchiuso tra  due <code class="literal">"</code> e
+  preceduto dalla parola chiave <code class="literal">msgid</code>; il corrispondente
+  messaggio tradotto va inserito tra la coppia di virgolette subito dopo,
+  quelle precedute dalla parola chiave <code class="literal">msgstr</code>. Ogni coppia
+  di messaggi è preceduta da un commento che indica il file e la riga da
+  cui il messaggio da tradurre è prelevata; nel commento possono anche
+  essere presenti informazioni utili per la traduzione, rese disponibili dagli
+  sviluppatori, o indicazioni su particolari formati che saranno spiegati in 
+  <a href="#sintassi-file-po" title="Sintassi dei file PO">la sezione chiamata “Sintassi dei file PO”</a>.
+  </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Annotazione</h3><p>
+    L'intestazione di un file PO è a sua volta una stringa traducibile.
+    Il testo di tale stringa è vuoto (cfr. riga 6 dell'esempio sopra), 
+    mentre la stringa tradotta deve seguire una particolare sintassi.</p></div><p>
+    Per poter completare la traduzione di questo file è necessario 
+    modificare nel modo opportuno l'intestazione e insereire le traduzioni
+    dei messaggi negli appositi spazi, come spiegato qui di seguito:
+  </p></div><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="operazioni-preliminari"></a>Modifica dell'intestazione</h3></div></div></div><p>
+    La prima cosa da modificare è l'intestazione del file PO. I dati da
+    modificare sono quelli scritti in maiuscolo, in particolare:
+    </p><div class="itemizedlist"><ul type="disc"><li><p><code class="literal">PACKAGE</code> - riga 8, da sostituire con
+      il nome del modulo</p></li><li><p><code class="literal">VERSION</code> - riga 8, da sostituire, se
+      noto, con il numero di versione del modulo</p></li><li><p><code class="literal">YEAR-MO-DA HO:MI +ZONE</code> - riga 9, da 
+      sostituire con data, ora e fuso orario della revisione/modifica, secondo
+      il formato suggerito; questo dato andrebbe modificato ogni volta che si
+      aggiorna la revisione della traduzione stessa</p></li><li><p><code class="literal">FULL NAME</code> - riga 10, nome e cognome
+      dell'ultimo traduttore che ha modificato la traduzione</p></li><li><p><code class="literal">EMAIL@ADDRESS</code> - riga 10, indirizzo email
+      dell'ultimo traduttore che ha modificato la traduzione; notare che tale
+      indirizzo è importante per la notifica degli errori di traduzione</p></li><li><p><code class="literal">LANGUAGE</code> - riga 11, lingua della traduzione,
+      questo valore va impostato a <code class="literal">Italian</code></p></li><li><p><code class="literal">LL@li.org</code> - riga 13, indirizzo email del
+      gruppo di traduzione per la lingua, questo valore va impostato a
+      <code class="literal">tp@lists.linux.it</code>; notare che tale indirizzo è
+      importante per la notifica degli errori di traduzione</p></li><li><p><code class="literal">CHARSET</code> - la codifica dei caratteri 
+      nella quale il file è stato salvato, tale valore deve essere
+      impostato a <code class="literal">UTF-8</code>; ovviamente il file deve essere
+      effettivamente in codifica UTF-8</p></li></ul></div><p>
+  </p><p>
+    Anche le righe di commento all'intestazione vanno modificate secondo le
+    indicazioni che seguono:
+    </p><div class="itemizedlist"><ul type="disc"><li><p>riga 1: sostituire con <code class="literal">Italian translation of
+        <em class="replaceable"><code>applicazione</code></em></code> o simile; si
+        deve usare l'inglese proprio perchè tale stringa descrive ad un
+        lettore "internazionale" del file di cosa parla il file</p></li><li><p>riga 2: sostituire con gli anni per il quale la traduzione
+        è coperta da copyright</p></li><li><p>riga 3: sostituire con i dati degli autori della traduzione, uno
+        per riga; si raccomanda di non cancellare i nomi di traduttori dai
+        quali si rileva una traduzione</p></li></ul></div><p>
+  </p><p>Tra la riga 2 e 3 andrebbe poi aggiunta una ulteriore riga di commento</p><pre class="programlisting">
+   # This file is distributed under the same license as the <em class="replaceable"><code>applicazione</code></em> package
+  </pre><p>
+    Infine, per completare questa prima fase, va elimata la riga 5, quella con
+    la scritta <code class="literal">fuzzy</code>. Se non si cancella questa riga,
+    infatti, anche traducendo tutti i messaggi della traduzione, questa non
+    verrà poi compilata. Per maggiori informazioni sulle stringhe fuzzy
+    e sul loro uso, consultare ???.
+  </p><div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Avvertimento</h3><p>Non passare al prossimo paragrafo prima aver letto due volte questo
+  ed aver imparato a memoria i passi descritti.  
+  </p></div></div><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="fine-preliminari"></a>Traduzione dei messaggi</h3></div></div></div><p>
+    Il file PO d'esempio, dopo aver apportato le operazioni preliminari alla
+    traduzione descritte in <a href="#operazioni-preliminari" title="Modifica dell'intestazione">la sezione chiamata “Modifica dell'intestazione”</a>, appare
+    come segue (le parole in corsivo sono quelle variabili in funzione dei dati
+    del traduttore e/o dell'applicazione):
+  </p><pre class="programlisting">
+ 1  # Italian tranlation of <em class="replaceable"><code>Applicazione</code></em>.
+ 2  # Copyright (C) 2001-2005 Free Software Foundation, Inc.
+ 3  # This file is distributed under the same license as the <em class="replaceable"><code>applicazione</code></em> package
+ 4  # <em class="replaceable"><code>Pluto</code></em> <em class="replaceable"><code>Bar</code></em> &lt;<em class="replaceable"><code>pluto@bar.net</code></em>&gt;, 2005.
+ 4
+ 5
+ 7  msgid ""
+ 8  msgstr ""
+ 9  "Project-Id-Version: <em class="replaceable"><code>applicazione</code></em> <em class="replaceable"><code>x.y.z</code></em>"
+10  "PO-Revision-Date: 2005-02-12 10:45 +0100\n"
+11  "Last-Translator: <em class="replaceable"><code>Pluto</code></em> <em class="replaceable"><code>Bar</code></em> &lt;<em class="replaceable"><code>pluto@bar.net</code></em>&gt;\n"
+12  "Language-Team: Italian &lt;tp@lists.linux.it&gt;\n"
+13  "MIME-Version: 1.0\n"
+14  "Content-Type: text/plain; charset=UTF-8\n"
+15  "Content-Transfer-Encoding: 8bit\n"
+16
+17  #: src/main.c:32
+18  msgid "First string"
+19  msgstr ""
+20  
+21  #: src/main.c:48
+22  msgid "Second string"
+23  msgstr ""
+</pre><p>
+      A questo punto per completare la traduzione è sufficente modificare
+      le righe 19 e 23 in modo tale che tra le "" di ciascuna riga ci sia la
+      traduzione di quanto riportato alla riga che precede.
+    </p><p>
+      In pratica, alla fine della fase di traduzione la parte finale del
+      file PO apparirà come segue:
+    </p><pre class="programlisting">
+[...]
+16
+17  #: src/main.c:32
+18  msgid "First string"
+19  msgstr "Prima stringa"
+20  
+21  #: src/main.c:48
+22  msgid "Second string"
+23  msgstr "Seconda stringa"
+</pre></div><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="verifica-traduzione"></a>Verificare la traduzione</h3></div></div></div><p>
+      A traduzione completata è possibile procedere con la fase di
+      revisione ed invio del file, secondo quanto previsto dal proprio gruppo
+      di traduzione. Ovviamente sarebbe opportuno verificare che la traduzione
+      non presenti errori <span class="emphasis"><em>tecnici</em></span>, ossia che dopo le modifiche
+      apportate il file <code class="filename">applicazione.it.po</code> rispetti la
+      sintassi dei file PO.
+    </p></div></div><div class="sect1" lang="it" xml:lang="it"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="sintassi-file-po"></a>Sintassi dei file PO</h2></div></div></div><p>
+  Oltre ad effettuare una traduzione corretta del messaggio originale, magari
+  anche rispettosa dello stile usato negli altri componenti dell'ambiente in 
+  cui si integrerà, bisogna accertarsi che non siano presenti errori
+  nella sintassi dello standard dei file PO.
+  </p><p>
+  Come brevemente spiegato in <a href="#gettext-files" title="File necessari alla traduzione">la sezione chiamata “File necessari alla traduzione”</a>, i file PO devono
+  essere trasformati in file leggibili da un computer. Se sono presenti errori
+  nel file PO, questi non influiscono solo nella traduzione effettuata, ma
+  possono bloccare l'intera applicazione.
+  </p><p>
+  In questa sezione verrà presentata una panoramica di tali regole di
+  sintassi. è però necessario premettere che le modalità
+  esatte di sostituzione dipendono non tanto dal file PO, ma dal linguaggio di
+  programmazione usato per sviluppare l'applicazione.
+  </p><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="escape-sequences"></a>Sequenze di escape</h3></div></div></div><p>
+    Forse il lettore ha già notato come nel file PO di esempio presentato
+    il carattere <code class="literal">"</code> (le virgolette, in Unicode identificato 
+    come <code class="literal">U+0022 QUOTATION MARK</code>) sia stato usato per
+    racchiudere il messaggio originario e quello tradotto
+    </p><p>
+    L'uso di tale carattere nei file PO è riservato quindi come
+    delimitatore di messaggio. Tutto ciò che è racchiuso tra due
+    vigolette è il messaggio originario se preceduto dalla parola chiave
+    <code class="literal">msgid</code>, è il messaggio tradotto se preceduto dalla
+    parola chiave <code class="literal">msgstr</code>. Per poter inserire nel messaggio un
+    carattere virgolette si deve procedere al così detto
+    <span class="emphasis"><em>escaping</em></span>, come nel seguente esempio:
+    </p><pre class="programlisting">
+    #: src/main.c:32
+    msgid "This file is \"odd\""
+    msgstr "Questo file è \"strano\""</pre><p>
+    La sequenza di caratteri <code class="literal">\"</code> è definita sequenza di
+    escape; funge infatti da scappatoia per poter aggirare una costrizione.
+    </p><p>
+    Risulta evidente quindi che all'interno di un messaggio il carattere 
+    <code class="literal">\</code> (backslash, in Unicode <code class="literal">U+005C REVERSE
+    SOLIDUS</code>) è un carattere riservato per l'escaping. Per
+    questo motivo per poter inserire un tale carattere in un messaggio è
+    necessario farne l'escaping, in pratica raddoppiarlo.
+    </p><p>
+    Altre due sequenze di escape frequenti sono quella per i caratteri non  
+    stampabile di fine linea e di tabulazione, rispettivamente resi all'interno
+    del messaggio con le sequenze di escape <code class="literal">\n</code> e
+    <code class="literal">\t</code>. Ad esempio per inserire un a capo alla fine di un
+    messaggio si avrebbe:
+    </p><pre class="programlisting">
+    #: src/main.c:32
+    msgid "Reading configuration\nReading personal data\nDone"
+    msgstr "Lettura della configurazione\nLettura dei dati personali\nFatto"
+    </pre><p>
+    Che una volta stampato a schermo apparirebbe come
+    </p><pre class="programlisting">
+Lettura della configurazione
+Lettura dei dati personali
+Fatto</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Nota</h3><p>
+      Usando un programma dedicato alla modifica dei file PO non è
+      necessario inserire manualmente queste sequenze di escape. Basta inserire
+      il carattere (stampabile come le virgolette o la backslash, o non
+      stampabile come la tabulazione e il ritorno a capo) nell'area di editazione, 
+      confermare tale inserimento ed il programma provvederà a rendere
+      questo carattere nella forma corretta. Ovviamente è necessario
+      conoscere tali sequenze di escape per poterle individuare nel messaggio
+      originario.
+      </p></div></div><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="sostituzione-c"></a>Sostituzione di variabile</h3></div></div></div><p>
+    Quando un programma produce un messaggio da mostrare all'utente, non sempre
+    è possibile conoscere a priori l'esatto contenuto del messaggio. 
+    Basta pensare, ad esempio, ai risultati di una ricerca, o al conteggio degli
+    oggetti presenti in una directory. Bisogna poter gestire la presenza di   
+    <span class="emphasis"><em>elementi variabili</em></span> all'interno del messaggio. 
+    </p><p>
+    Il linguaggio “<span class="quote">principe</span>” dei sistemi Unix è il C, per
+    cui si comincerà a prendere in esame la sua sintassi per mezzo di due   
+    messaggi di esempio con 3 “<span class="quote">segnaposto</span>” per altrettante
+    sostituzioni. 
+    </p><pre class="programlisting">
+   #: ../src/main.c:32
+   #, c-format
+   msgid "Could not open \"%s\""
+   msgstr "Impossibile aprire \"%s\""
+  
+   #: ../src/main.c:48
+   #, c-format
+   msgid "%d files, %ld M total"
+   msgstr "%d file, in totale %ld M"
+</pre><p>
+    La prima sostituzione, <code class="literal">%s</code> indica che tale elemento verrà
+    sostituito con una stringa (nel senso del linguaggio C, ossia un vettore di
+    caratteri, ivi incluso il carattere spazio o altro). Il traduttore deve
+    aver cura di replicare tale segnaposto nel messaggio tradotto, pena la
+    presenza di errori di compilazione. Nel caso <code class="literal">%s</code> è
+    il nome di un file, o di una directory, o di un qualsiasi altro oggetto
+    apribile dall'applicazione.
+    </p><p>
+    Nel secondo messaggio invece abbiamo il segnaposto per i numeri, 
+    <code class="literal">%d</code>, nella sua forma semplice ed in una delle possibili
+    forme per specificare in modo più preciso il formato.
+    </p><p>
+    è opportuno notare come entrambi i messaggi presentino il commento
+    <code class="literal">#, c-format</code> che indica, per l'appunto, che il messaggio
+    segue il formato del linguaggio C. Il questi messaggi il carattere 
+    percentuale (<code class="literal">%</code>) serve da carattere inizale per i
+    segnaposto e non può essere usato come simbolo. Se si ha necessità
+    di inserilo, allora deve essere raddoppiato, come nell'esempio che segue.
+    </p><pre class="programlisting">
+   #: ../src/main.c:12
+   #, c-format
+   msgid "Percentage: %d %%"
+   msgstr "Percentuale: %d %%"
+</pre><p>
+    Risulta evidente come la difficoltà maggiore sia quella di capire
+    con cosa saranno sostituiti i <code class="literal">%s</code>. A questo problema  
+    talvolta solo una lettura del codice o un accorto commento da parte degli
+    sviluppatori può dare soluzione.
+    </p></div><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="sostituzione-posizione"></a>Inversione di posizione</h3></div></div></div><p>
+  Sebbene non frequente, spesso potrebbe rendersi necessario l'inversione
+  dell'ordine con cui i segnaposto compaiono nel messaggio. Tale inversione
+  è praticabile senza problemi nè timori quando si tratta di due
+  sengaposto differenti (ad esempio un <code class="literal">%s</code> ed un
+  <code class="literal">%d</code>). L'inversione è completamente gestita da gettext
+  ed il traduttore è libero di porre i due elementi come meglio crede
+  l'uno rispetto all'altro.
+  </p><p>
+  L'inversione è anche possile nel caso di segnaposto uguali, a patto
+  di usare l'accortezza di “<span class="quote">numerare</span>” in un certo modo i
+  segnaposto secondo l'ordine assunto nel messaggio originale.
+  </p><p>
+  L'esempio che segue dovrebbe essere sufficiente per capire il funzionamento:
+  i due <code class="literal">%s</code> rappresentano il primo il nome di un file ed il
+  secondo il nome di un utente proprietario del file.
+  </p><pre class="programlisting">
+   #: src/chown-core.c:152
+   #, c-format
+   msgid "ownership of %s retained as %s\n"
+   msgstr "mantenuto %2$s come proprietario di %1$s\n"
+</pre><p>
+    In questo modo è stato possibile mantenere una forma chiara
+    in Italiano senza dover essere limitati dalla presenza e dalla
+    posizione dei due segnaposto.
+  </p></div><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="forme-plurali"></a>Forme plurali</h3></div></div></div><p>
+    Nell'esempio del paragrafo precente relativo al numero di file in
+    una cartella, non si è tenuto conto del fatto che lingue
+    diverse possono usare diverse scritture a secondo del numero di
+    elementi. In Italiano, come in Inglese, esistono solo la forma
+    singolare (numero di elementi pari ad 1) e quella plurale (numero
+    di elementi maggiore di 1); In altre lingue però si possono
+    avere 3 forme diverse (1, 2, molti).
+  </p><p>
+    Il framework gettext fornisce la possibilità di gestire
+    queste necessità, consentendo di usare 2 o più
+    forme diverse a secondo del numero di elementi che si hanno.
+  </p><p>
+    Nella pratica il file PO presenta voci simili a quelle
+    dell'esempio che segue.
+  </p><pre class="programlisting">
+  msgid ""
+  msgstr ""
+  "Project-Id-Version: addressbook 2.0.0\n"
+  [...]
+  "MIME-Version: 1.0\n"
+  "Content-Type: text/plain; charset=UTF-8\n"
+  "Content-Transfer-Encoding: 8bit\n"
+  "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+  [....]
+
+  #: ../addressbook/addressbook-view.c:149
+  #, c-format
+  msgid "Addressbook folder has %d contact"
+  msgid_plural "Addressbook folder has %d contacts"
+  msgstr[0] "La rubrica corrente presenta %d contatto"
+  msgstr[1] "la rubrica corrente presenta %d contatti"
+</pre><p>
+   In questo esempio sono riportati parte del messaggio di
+   intestazione ed un messaggio in cui viene fatto uso della forma
+   plurale. A differenza del messaggio di intestazione presentato in
+   <a href="#fine-preliminari" title="Traduzione dei messaggi">la sezione chiamata “Traduzione dei messaggi”</a>, qui vi è una riga,
+   quella che comincia per <code class="literal">Plural-Forms:</code>, che
+   dichiara sia che il file farà uso delle forme plurali, sia
+   che per la lingua si hanno solo 2 forme (nplurals=2) e che la forma
+   plurale si ha quando il numero di elementi è diverso da 1
+   (plural = (n != 1)).
+  </p><p>
+   I messaggi poi che sono da tradurre e che richiedono una forma
+   diversa i plurali, compaiono appaiati come nell'esempio: il primo
+   è relativo alla forma singolare, il secondo alla forma
+   plurale. Da notare che il fatto che ci sia %d sia nel singolare che
+   nel plurale è una scelta degli sviluppatori; sono infatti
+   ammesse anche cose come:
+ </p><pre class="programlisting">
+  #: ../addressbook/addressbook-view.c:149
+  #, c-format
+  msgid "Addressbook folder has only one contact"
+  msgid_plural "Addressbook folder has %d contacts"
+  msgstr[0] "La rubrica corrente presenta solo un contatto"
+  msgstr[1] "la rubrica corrente presenta %d contatti"
+</pre></div></div><div class="sect1" lang="it" xml:lang="it"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="architettura-gnome"></a>Architettura di GNOME</h2></div></div></div><p>
+  In questa sezione, in modo simile alla precedente, verranno elencati e
+  descritti i messaggi che si possono trovare in una traduzione di un progetto
+  GNOME in funzione delle tecnologie usate. Nello specifico messaggi estratti
+  da file <code class="literal">.server</code>, file <code class="literal">.desktop</code>, file
+  <code class="literal">schemas</code>, proprietà di widget e traduzioni di librerie, 
+  </p></div><div class="sect1" lang="it" xml:lang="it"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="aggiornare-traduzione"></a>Aggiornare una traduzione</h2></div></div></div><p>
+  Ovviemente una traduzione va mantenuta aggiornata :-)
+  </p></div><div class="sect1" lang="it" xml:lang="it"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="emacs"></a>Usare Emacs</h2></div></div></div><p>
+  In questa sezione verrà analizzato l'uso di Emacs per la gestione
+  dei file PO.
+  </p><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="emacs-intro"></a>Introduzione ad Emacs</h3></div></div></div><p>
+  <span class="application">Emacs</span> è un editor di testo (e molto
+  altro) un po' particolare. Il suo sviluppo ha via molti anni fa e la
+  sua struttura ed interfaccia risente ancora di questa
+  "vecchiaia". Semplicemente, <span class="application">Emacs</span> segue
+  sue proprie regole ed è da solo un ambiente completo per chi ha
+  necessità di sviluppo.
+  </p><p>
+  Non ci si deve aspettare la presenza di dialogi di apertura e
+  salvataggio di file, o pulsanti e caselle di spunta per le
+  opzioni. <span class="application">Emacs</span> è pensato per essere usato
+  senza dover togliere le mani dalla tastiera, senza dover usare il
+  mouse; allo stesso tempo, però, <span class="application">Emacs</span> usa
+  delle scorciatoie non standard, retaggio dei suoi venti anni di
+  gloriosa storia. Ad esempio per selezionare del testo è necessario
+  in primo luogo premere <span><strong class="keycap">Ctrl</strong></span>-<span><strong class="keycap">barra
+  spaziatrice</strong></span> per attivare la modalità di
+  selezione, quindi spostarsi (con i tasti freccia o con le
+  scorciatoie per selezionare l'intera parola o riga o paragrafo) fino
+  ad evidenziare la porzione testo voluta. Una volta evidenziato, è
+  possibile copiare il testo con
+  <span><strong class="keycap">Alt</strong></span>-<span><strong class="keycap">W</strong></span> oppure
+  tagliarlo con
+  <span><strong class="keycap">Ctrl</strong></span>-<span><strong class="keycap">W</strong></span>, quindi
+  incollarlo altrove con
+  <span><strong class="keycap">Ctrl</strong></span>-<span><strong class="keycap">Y</strong></span>.
+  </p><p>
+  Per imparare ad usare <span class="application">Emacs</span> rimandiamo
+  all'ottimo tutorial in linea. Qui vengono dettagliatamente spiegate
+  tutte le funzionalità per l'editing del testo.
+  </p></div><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="emacs-po-mode"></a>Il po-mode di Emacs</h3></div></div></div><p>
+  Su un sistema ben configurato, all'apertuta di un file PO,
+  <span class="application">Emacs</span> attiverà il cosiddetto
+  <em class="firstterm">po-mode</em>, ossia renderà disponibili una serie
+  di scorciatoie e funzionalità utili per la gestione di un file PO ed
+  allo stesse tempo "colorerà" il file per evidenziare i diversi elementi.
+  </p><p>
+  <span class="application">Emacs</span> è provvisto di diversi
+  <span class="emphasis"><em>mode</em></span> (o modalità), ognuno dei quali permette
+  all'utente di gestire in modo più semplice il file da editare. Come
+  spiegato in <a href="#iniziare-una-traduzione" title="Iniziare una traduzione">la sezione chiamata “Iniziare una traduzione”</a>, i file PO
+  hanno una certa struttura e debbono rispettare una certa sintassi:
+  ad esempio inserire del testo al di fuori delle virgolette che
+  delimitano un <code class="literal">msgstr</code> è un errore che porta alla
+  non compilazione del file PO, così come non inserire uno
+  <code class="literal">\n</code> alla fine di un messaggio quando è presente
+  alla fine del <code class="literal">msgid</code>.
+  </p><p>
+  <span class="application">Emacs</span>, usando il
+  <span class="emphasis"><em>po-mode</em></span>, permette di:
+  </p><div class="itemizedlist"><ul type="disc"><li><p>evidenziare la struttura del file tramite colorazione
+  delle parole chiave;</p></li><li><p>impedire l'editazione del testo al di fuori del
+  <code class="literal">msgstr</code>;</p></li><li><p>navigare nel file PO con semplici scorciatoie, per passare
+  al messaggio, al messaggio fuzzy, al messaggio non tradotto
+  successivo o precedente;</p></li><li><p>segnare un messaggio come fuzzy o togliere tale segno;</p></li><li><p>annullare le modifiche apportate editando i <code class="literal">msgstr</code>;</p></li><li><p>aprire il file sorgente nella posizione del messaggio;</p></li><li><p>convalidare il file PO e verificare la presenza di errori;</p></li></ul></div><p>
+  La cosa importante da capire per usare al meglio il
+  <span class="emphasis"><em>po-mode</em></span> è che la navigazione nel file è
+  disgiunta dalla modifica dei messaggi. Se infatti avessimo aperto il
+  file PO con un altro editor di testo come
+  <span class="application">gedit</span>, avremmo potuto spostarci nel file
+  solo usando i tasti freccia della tastiera e/o i tasti PagSu e
+  PagGiù; la pressione di un qualsiasi altro tasto (lettere o numeri)
+  avrebbe inserito qualcosa nel punto in cui si trovava il cursore. Il
+  <span class="emphasis"><em>po-mode</em></span> agisce diversamente: la modifica è
+  permessa solo di un <code class="literal">msgstr</code> alla volta e solo dopo
+  aver indicato (premendo il tasto Invio) di volerlo
+  modificare. Qualsiasi pressione di qualsiasi tasto che non sia una
+  scorciatoia quando un <code class="literal">msgstr</code> non è stato
+  "aperto", o attivato, per la modifica, non inserisce alcunché nel
+  file PO.
+  </p><p>
+  In pratica, usando il <span class="emphasis"><em>po-mode</em></span> mode bisogna
+  spostarsi sul messaggio da modificare usando i tasti freccia o le
+  scorciatoie fornite dal <span class="emphasis"><em>po-mode</em></span> stesso, premere
+  Invio per attivare la modifica del messaggio selezionato, modificare
+  il testo del <code class="literal">msgstr</code>, ed confermare le modifiche con
+  un
+  <span><strong class="keycap">Ctrl</strong></span>-<span><strong class="keycap">C</strong></span>-<span><strong class="keycap">C</strong></span>
+  che fa tornare nella modalità navigazione. Da notare che durante la
+  fase di modifica del <code class="literal">msgstr</code>, sono disponibili
+  tutte le funzionalità di editing del testo semplice di
+  <span class="application">Emacs</span> e la finestra viene divisa in due:
+  la parte superiore con il file PO ed il <code class="literal">msgid</code> del
+  messaggio che si sta editando evidenziato, la parte inferiore con in
+  contenuto del <code class="literal">msgstr</code>.
+  </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Scorciatoie in Emacs</h3><p>Per ragioni tipografiche, in questa guida le scorciatoie di
+  <span class="application">Emacs</span> non sono scritte così come da
+  convenzione dei vari manuali e tutorial del
+  programma.
+  <span><strong class="keycap">Ctrl</strong></span>-<span><strong class="keycap">C</strong></span>-<span><strong class="keycap">C</strong></span>
+  ad emempio corrisponde a ...., cioè alla sequenza "premere e tenere
+  premuto il tasto  Ctrl, quindi premere C una prima ed una seconda
+  volta, quindi rilasciare Ctrl".</p></div></div><div class="sect2" lang="it" xml:lang="it"><div class="titlepage"><div><div><h3 class="title"><a id="emacs-navigazione"></a>Navigare nei file PO</h3></div></div></div><p>
+  Il primo aspetto interessante del <span class="emphasis"><em>po-mode</em></span>
+  riguarda la modalità fornita per spostarsi all'interno del file.
+  </p><p>
+  Oltre infatti alla possibilità di passare una riga sotto o sopra
+  rispetto alla pozione corrente del cursore con i tasti freccia su e
+  freccia giù, o una pagina su e giù, con il
+  <span class="emphasis"><em>po-mode</em></span> risulta possibile passare direttamente
+  al messaggio precedente o successivo, indipendentemente dal numero
+  di righe da "saltare", discriminando tra messaggio, messaggio
+  tradotto, messaggio fuzzy, messaggio non tradotto e messaggio
+  obsoleto. La seguente tabella elenca scorciatoie ed azione compiuta.
+  </p><div class="table"><a id="po-mode-navigazione"></a><p class="title"><b>Tabella 1. Scorciatoie per la navigazione nei file PO</b></p><table summary="Scorciatoie per la navigazione nei file PO" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
+<p>Scorciatoia</p>
+</th><th>
+<p>Stamperebbe</p>
+</th><th>
+<p>Funzione</p>
+</th></tr></thead><tbody><tr><td valign="top">
+<p><span><strong class="keycap">N</strong></span></p>
+</td><td valign="top">
+<p>n</p>
+</td><td valign="top">
+<p>Sposta il puntatore sul messaggio seguente</p>
+</td></tr><tr><td valign="top">
+<p><span><strong class="keycap">P</strong></span></p>
+</td><td valign="top">
+<p>p</p>
+</td><td valign="top">
+<p>Sposta il puntatore sul messaggio precedente, di tipo qualsiasi</p>
+</td></tr><tr><td valign="top">
+<p><span><strong class="keycap">T</strong></span></p>
+</td><td valign="top">
+<p>t</p>
+</td><td valign="top">
+<p>Sposta il puntatore sul messaggio tradotto seguente, di tipo qualsiasi</p>
+</td></tr><tr><td valign="top">
+<p><span><strong class="keycap">Maiusc</strong></span>-<span><strong class="keycap">T</strong></span></p>
+</td><td valign="top">
+<p>T</p>
+</td><td valign="top">
+<p>Sposta il puntatore sul messaggio tradotto precedente</p>
+</td></tr><tr><td valign="top">
+<p><span><strong class="keycap">F</strong></span></p>
+</td><td valign="top">
+<p>f</p>
+</td><td valign="top">
+<p>Sposta il puntatore sul messaggio fuzzy successivo</p>
+</td></tr><tr><td valign="top">
+<p><span><strong class="keycap">Maiusc</strong></span>-<span><strong class="keycap">F</strong></span></p>
+</td><td valign="top">
+<p>F</p>
+</td><td valign="top">
+<p>Sposta il puntatore sul messaggio fuzzy precedente</p>
+</td></tr><tr><td valign="top">
+<p><span><strong class="keycap">u</strong></span></p>
+</td><td valign="top">
+<p>u</p>
+</td><td valign="top">
+<p>Sposta il puntatore sul messaggio non tradotto successivo</p>
+</td></tr><tr><td valign="top">
+<p><span><strong class="keycap">Maiusc</strong></span>-<span><strong class="keycap">U</strong></span></p>
+</td><td valign="top">
+<p>U</p>
+</td><td valign="top">
+<p>Sposta il puntatore sul messaggio non tradotto precedente</p>
+</td></tr><tr><td valign="top">
+<p><span><strong class="keycap">O</strong></span></p>
+</td><td valign="top">
+<p>o</p>
+</td><td valign="top">
+<p>Sposta il puntatore sul messaggio obsoleto successivo</p>
+</td></tr><tr><td valign="top">
+<p><span><strong class="keycap">Maiusc</strong></span>-<span><strong class="keycap">O</strong></span></p>
+</td><td valign="top">
+<p>O</p>
+</td><td valign="top">
+<p>Sposta il puntatore sul messaggio obsoleto precedente</p>
+</td></tr></tbody></table></div><div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Avvertimento</h3><p>
+Per tener conto della differente notazione tra
+<span class="application">Emacs</span> e lo GNOME Desktop, nella prima
+colonna della tabella sono riportate le scorciatoie da tastiera così
+come da convenzione dello GNOME Desktop, in seconda colonna la
+convenzione di <span class="application">Emacs</span>, ossia il carattere
+che deve essere inviato da tastiera. Tenere presente infatti che
+<span class="application">Emacs</span> non opera per scorciatoie, ma per
+segnale ricevuto, per cui un
+<span><strong class="keycap">Maiusc</strong></span>-<span><strong class="keycap">lettera</strong></span>
+è equivalente alla pressione del tasto <span><strong class="keycap">BloccaMaiusc</strong></span>
+seguito da una lettera.
+</p></div></div></div></div></body></html>
