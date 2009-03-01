@@ -282,6 +282,63 @@
     </div>
 
 
+    <div id="website">
+    <h2>Il sito</h2>
+    <p>Questo sito è attualmente gestito da <a href="http://nerd.ocracy.org/em/">Emanuele Aina</a>
+    in un archivio <a href="http://www.selenic.com/mercurial/">Mercurial</a>:
+    <a href="http://techn.ocracy.org/tp/">http://techn.ocracy.org/tp/</a>. Da tale indirizzo è
+    possibile scaricare l'intero contenuto del sito come ZIP o TGZ, oppure è possibile usare
+    Mercurial seguendo questa breve guida:</p>
+
+    <ol>
+        <li>
+        installazione di Mercurial (su Debian/Ubuntu):<br/>
+        <code>$ aptitude install mercurial</code>
+        </li>
+
+        <li>
+        impostazione dell'autore delle modifiche:<br/>
+        <code>$ echo -e "[ui]\n username=Tizio Caio Sempronio &lt;tizio.caio@example.com&gt;" &gt;&gt; ~/.hgrc]]></code>
+        </li>
+
+        <li>
+        clonazione dell'archivio del sito:<br/>
+        <code>$ hg clone <a href="http://techn.ocracy.org/tp/">http://techn.ocracy.org/tp/</a></code>
+        </li>
+
+        <li>
+        <code>$ cd tp/</code>
+        </li>
+
+        <li>
+        correzioni e modifiche
+        </li>
+
+        <li>
+        controllo dei cambiamenti:<br/>
+        <code>$ hg diff</code>
+        </li>
+
+        <li>
+        salvataggio dei cambiamenti nella copia locale dell'archivio:<br/>
+        <code>$ hg commit</code>
+        </li>
+
+        <li>
+        creazione del file con le modifiche:<br/>
+        <code>$ hg bundle ~/modifiche-da-mandare-a-em.hg</code>
+        </li>
+
+        <li>
+        invio del file <code>~/modifiche-da-mandare-a-em.hg</code> a <a href="mailto:em@nerd.ocracy.org">Emanuele</a>
+        o, nel caso non si avesse nessuna risposta in tempi ragionevoli, direttamente alla
+        <a href="mailto:tp@lists.linux.it">lista dei traduttori</a>.
+        </li>
+    </ol>
+
+    <p>Sono sempre bene accetti ogni tipo di correzioni, migliorie o nuovi contenuti per il sito.</p>
+    </div>
+
 
     <div id="ml">
     <h2>La mailing list</h2>
