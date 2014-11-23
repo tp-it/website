@@ -33,7 +33,7 @@
      comprensibili le comunicazioni internazionali sia tramite elaboratore
      elettronico, sia senza.</p>
 
-     <p>Sebbene tale formato goda di una pregevole rappresentazione logica è
+     <p>Sebbene tale formato goda di una pregevole rappresentazione logica
      (anno-&gt;mese-&gt;giorno-&gt;ora-&gt;minuto), è altresì vero che esula
      dall'interesse di un traduttore: non bisogna "creare" qualcosa che deve
      essere usato e capito da persone di diverse nazioni che usano diverse
@@ -93,11 +93,11 @@
 
    <div id="orario">
      <h2>Orario</h2>
-     <p>La notazione convenzionale, pur se non codificata, per indicare un
+     <p>La notazione convenzionale, per indicare un
      orario in lingua italiana è</p>
     
      <ul>
-       <li>o.mm.ss</li>
+       <li>o:mm:ss</li>
      </ul>
 
      <p>con l'ora espressa nel formato a 24 ore e <em>senza</em> lo zero 
@@ -106,14 +106,14 @@
      <p>Esprimendo nella sintassi del programma GNU date(1) diventa:</p>
 
      <ul>
-       <li><code>%k.%M.%S</code></li>
+       <li><code>%k:%M:%S</code></li>
      </ul>
 
      <p>Esempi:</p>
 	
      <ul>
-       <li><samp>13.00.56</samp></li>
-       <li><samp>&nbsp;4.12</samp></li>
+       <li><samp>13:00:56</samp></li>
+       <li><samp>&nbsp;4:12</samp></li>
      </ul>
 
      <p>La presenza dello zero iniziale (ottenibile con date(1) sostituendo 
